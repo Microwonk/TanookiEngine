@@ -11,7 +11,7 @@
 # =============================================================================
 
 # =============================================================================
-# Project: VulkanProject
+# Project: TanookiEngine
 # Configurations: Debug
 # =============================================================================
 
@@ -41,58 +41,84 @@ include CMakeFiles/rules.ninja
 
 cmake_ninja_workdir = C$:/Users/Microwonk/Dev/VulkanGameEngine/cmake-build-debug/
 # =============================================================================
-# Object build statements for EXECUTABLE target VulkanProject
+# Object build statements for EXECUTABLE target TanookiEngine
 
 
 #############################################
-# Order-only phony target for VulkanProject
+# Order-only phony target for TanookiEngine
 
-build cmake_object_order_depends_target_VulkanProject: phony || CompileShaders cmake_object_order_depends_target_glfw
+build cmake_object_order_depends_target_TanookiEngine: phony || CompileShaders cmake_object_order_depends_target_glfw
 
-build CMakeFiles/VulkanProject.dir/src/first_app.cpp.obj: CXX_COMPILER__VulkanProject_unscanned_Debug C$:/Users/Microwonk/Dev/VulkanGameEngine/src/first_app.cpp || cmake_object_order_depends_target_VulkanProject
-  DEP_FILE = CMakeFiles\VulkanProject.dir\src\first_app.cpp.obj.d
+build CMakeFiles/TanookiEngine.dir/src/first_app.cpp.obj: CXX_COMPILER__TanookiEngine_unscanned_Debug C$:/Users/Microwonk/Dev/VulkanGameEngine/src/first_app.cpp || cmake_object_order_depends_target_TanookiEngine
+  DEP_FILE = CMakeFiles\TanookiEngine.dir\src\first_app.cpp.obj.d
   FLAGS = -g -fdiagnostics-color=always -Wall -Wextra -pedantic
   INCLUDES = -IC:/Users/Microwonk/Dev/VulkanGameEngine/lib/glm -IC:/Users/Microwonk/Dev/VulkanGameEngine/lib/glfw3/include -isystem C:/VulkanSDK/1.3.261.1/Include
-  OBJECT_DIR = CMakeFiles\VulkanProject.dir
-  OBJECT_FILE_DIR = CMakeFiles\VulkanProject.dir\src
+  OBJECT_DIR = CMakeFiles\TanookiEngine.dir
+  OBJECT_FILE_DIR = CMakeFiles\TanookiEngine.dir\src
 
-build CMakeFiles/VulkanProject.dir/src/main.cpp.obj: CXX_COMPILER__VulkanProject_unscanned_Debug C$:/Users/Microwonk/Dev/VulkanGameEngine/src/main.cpp || cmake_object_order_depends_target_VulkanProject
-  DEP_FILE = CMakeFiles\VulkanProject.dir\src\main.cpp.obj.d
+build CMakeFiles/TanookiEngine.dir/src/main.cpp.obj: CXX_COMPILER__TanookiEngine_unscanned_Debug C$:/Users/Microwonk/Dev/VulkanGameEngine/src/main.cpp || cmake_object_order_depends_target_TanookiEngine
+  DEP_FILE = CMakeFiles\TanookiEngine.dir\src\main.cpp.obj.d
   FLAGS = -g -fdiagnostics-color=always -Wall -Wextra -pedantic
   INCLUDES = -IC:/Users/Microwonk/Dev/VulkanGameEngine/lib/glm -IC:/Users/Microwonk/Dev/VulkanGameEngine/lib/glfw3/include -isystem C:/VulkanSDK/1.3.261.1/Include
-  OBJECT_DIR = CMakeFiles\VulkanProject.dir
-  OBJECT_FILE_DIR = CMakeFiles\VulkanProject.dir\src
+  OBJECT_DIR = CMakeFiles\TanookiEngine.dir
+  OBJECT_FILE_DIR = CMakeFiles\TanookiEngine.dir\src
 
-build CMakeFiles/VulkanProject.dir/src/tnk_window.cpp.obj: CXX_COMPILER__VulkanProject_unscanned_Debug C$:/Users/Microwonk/Dev/VulkanGameEngine/src/tnk_window.cpp || cmake_object_order_depends_target_VulkanProject
-  DEP_FILE = CMakeFiles\VulkanProject.dir\src\tnk_window.cpp.obj.d
+build CMakeFiles/TanookiEngine.dir/src/tnk_device.cpp.obj: CXX_COMPILER__TanookiEngine_unscanned_Debug C$:/Users/Microwonk/Dev/VulkanGameEngine/src/tnk_device.cpp || cmake_object_order_depends_target_TanookiEngine
+  DEP_FILE = CMakeFiles\TanookiEngine.dir\src\tnk_device.cpp.obj.d
   FLAGS = -g -fdiagnostics-color=always -Wall -Wextra -pedantic
   INCLUDES = -IC:/Users/Microwonk/Dev/VulkanGameEngine/lib/glm -IC:/Users/Microwonk/Dev/VulkanGameEngine/lib/glfw3/include -isystem C:/VulkanSDK/1.3.261.1/Include
-  OBJECT_DIR = CMakeFiles\VulkanProject.dir
-  OBJECT_FILE_DIR = CMakeFiles\VulkanProject.dir\src
+  OBJECT_DIR = CMakeFiles\TanookiEngine.dir
+  OBJECT_FILE_DIR = CMakeFiles\TanookiEngine.dir\src
+
+build CMakeFiles/TanookiEngine.dir/src/tnk_pipeline.cpp.obj: CXX_COMPILER__TanookiEngine_unscanned_Debug C$:/Users/Microwonk/Dev/VulkanGameEngine/src/tnk_pipeline.cpp || cmake_object_order_depends_target_TanookiEngine
+  DEP_FILE = CMakeFiles\TanookiEngine.dir\src\tnk_pipeline.cpp.obj.d
+  FLAGS = -g -fdiagnostics-color=always -Wall -Wextra -pedantic
+  INCLUDES = -IC:/Users/Microwonk/Dev/VulkanGameEngine/lib/glm -IC:/Users/Microwonk/Dev/VulkanGameEngine/lib/glfw3/include -isystem C:/VulkanSDK/1.3.261.1/Include
+  OBJECT_DIR = CMakeFiles\TanookiEngine.dir
+  OBJECT_FILE_DIR = CMakeFiles\TanookiEngine.dir\src
+
+build CMakeFiles/TanookiEngine.dir/src/tnk_swap_chain.cpp.obj: CXX_COMPILER__TanookiEngine_unscanned_Debug C$:/Users/Microwonk/Dev/VulkanGameEngine/src/tnk_swap_chain.cpp || cmake_object_order_depends_target_TanookiEngine
+  DEP_FILE = CMakeFiles\TanookiEngine.dir\src\tnk_swap_chain.cpp.obj.d
+  FLAGS = -g -fdiagnostics-color=always -Wall -Wextra -pedantic
+  INCLUDES = -IC:/Users/Microwonk/Dev/VulkanGameEngine/lib/glm -IC:/Users/Microwonk/Dev/VulkanGameEngine/lib/glfw3/include -isystem C:/VulkanSDK/1.3.261.1/Include
+  OBJECT_DIR = CMakeFiles\TanookiEngine.dir
+  OBJECT_FILE_DIR = CMakeFiles\TanookiEngine.dir\src
+
+build CMakeFiles/TanookiEngine.dir/src/tnk_window.cpp.obj: CXX_COMPILER__TanookiEngine_unscanned_Debug C$:/Users/Microwonk/Dev/VulkanGameEngine/src/tnk_window.cpp || cmake_object_order_depends_target_TanookiEngine
+  DEP_FILE = CMakeFiles\TanookiEngine.dir\src\tnk_window.cpp.obj.d
+  FLAGS = -g -fdiagnostics-color=always -Wall -Wextra -pedantic
+  INCLUDES = -IC:/Users/Microwonk/Dev/VulkanGameEngine/lib/glm -IC:/Users/Microwonk/Dev/VulkanGameEngine/lib/glfw3/include -isystem C:/VulkanSDK/1.3.261.1/Include
+  OBJECT_DIR = CMakeFiles\TanookiEngine.dir
+  OBJECT_FILE_DIR = CMakeFiles\TanookiEngine.dir\src
 
 
 # =============================================================================
-# Link build statements for EXECUTABLE target VulkanProject
+# Link build statements for EXECUTABLE target TanookiEngine
 
 
 #############################################
-# Link the executable bin\VulkanProject.exe
+# Link the executable bin\TanookiEngine.exe
 
-build bin/VulkanProject.exe: CXX_EXECUTABLE_LINKER__VulkanProject_Debug CMakeFiles/VulkanProject.dir/src/first_app.cpp.obj CMakeFiles/VulkanProject.dir/src/main.cpp.obj CMakeFiles/VulkanProject.dir/src/tnk_window.cpp.obj | C$:/VulkanSDK/1.3.261.1/Lib/vulkan-1.lib lib/glfw3/src/libglfw3.a || CompileShaders lib/glfw3/src/libglfw3.a
+build bin/TanookiEngine.exe: CXX_EXECUTABLE_LINKER__TanookiEngine_Debug CMakeFiles/TanookiEngine.dir/src/first_app.cpp.obj CMakeFiles/TanookiEngine.dir/src/main.cpp.obj CMakeFiles/TanookiEngine.dir/src/tnk_device.cpp.obj CMakeFiles/TanookiEngine.dir/src/tnk_pipeline.cpp.obj CMakeFiles/TanookiEngine.dir/src/tnk_swap_chain.cpp.obj CMakeFiles/TanookiEngine.dir/src/tnk_window.cpp.obj | C$:/VulkanSDK/1.3.261.1/Lib/vulkan-1.lib lib/glfw3/src/libglfw3.a || CompileShaders lib/glfw3/src/libglfw3.a
   FLAGS = -g
   LINK_LIBRARIES = C:/VulkanSDK/1.3.261.1/Lib/vulkan-1.lib  lib/glfw3/src/libglfw3.a  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
-  OBJECT_DIR = CMakeFiles\VulkanProject.dir
+  OBJECT_DIR = CMakeFiles\TanookiEngine.dir
   POST_BUILD = cd .
   PRE_LINK = cd .
-  TARGET_FILE = bin\VulkanProject.exe
-  TARGET_IMPLIB = lib\libVulkanProject.dll.a
-  TARGET_PDB = VulkanProject.exe.dbg
+  TARGET_FILE = bin\TanookiEngine.exe
+  TARGET_IMPLIB = lib\libTanookiEngine.dll.a
+  TARGET_PDB = TanookiEngine.exe.dbg
 
 
 #############################################
 # Utility command for CompileShaders
 
-build CompileShaders: phony CMakeFiles/CompileShaders
+build CMakeFiles/CompileShaders.util: CUSTOM_COMMAND CMakeFiles/CompileShaders
+  COMMAND = cmd.exe /C "cd /D C:\Users\Microwonk\Dev\VulkanGameEngine\cmake-build-debug && "C:\Program Files\JetBrains\CLion 2023.2\bin\cmake\win\x64\bin\cmake.exe" -E make_directory C:/Users/Microwonk/Dev/VulkanGameEngine/cmake-build-debug/shaders && "C:\Program Files\JetBrains\CLion 2023.2\bin\cmake\win\x64\bin\cmake.exe" -E copy_if_different C:/Users/Microwonk/Dev/VulkanGameEngine/shaders/simple_shader.frag.spv C:/Users/Microwonk/Dev/VulkanGameEngine/shaders/simple_shader.vert.spv C:/Users/Microwonk/Dev/VulkanGameEngine/cmake-build-debug/shaders"
+  DESC = Running utility command for CompileShaders
+  restat = 1
+
+build CompileShaders: phony CMakeFiles/CompileShaders.util
 
 
 #############################################
@@ -164,7 +190,7 @@ build install/strip: phony CMakeFiles/install/strip.util
 # Custom command for CMakeFiles\CompileShaders
 
 build CMakeFiles/CompileShaders | ${cmake_ninja_workdir}CMakeFiles/CompileShaders: CUSTOM_COMMAND
-  COMMAND = cmd.exe /C "cd /D C:\Users\Microwonk\Dev\VulkanGameEngine\cmake-build-debug && cmd compile.bat"
+  COMMAND = cmd.exe /C "cd /D C:\Users\Microwonk\Dev\VulkanGameEngine\cmake-build-debug && "C:\Program Files\JetBrains\CLion 2023.2\bin\cmake\win\x64\bin\cmake.exe" -E chdir C:/Users/Microwonk/Dev/VulkanGameEngine cmd /c compile.bat"
   DESC = Compiling shaders
 
 # =============================================================================
@@ -1976,9 +2002,9 @@ build lib/glfw3/tests/install/strip: phony lib/glfw3/tests/CMakeFiles/install/st
 # =============================================================================
 # Target aliases.
 
-build VulkanProject: phony bin/VulkanProject.exe
+build TanookiEngine: phony bin/TanookiEngine.exe
 
-build VulkanProject.exe: phony bin/VulkanProject.exe
+build TanookiEngine.exe: phony bin/TanookiEngine.exe
 
 build boing: phony lib/glfw3/examples/boing.exe
 
@@ -2112,7 +2138,7 @@ build windows.exe: phony lib/glfw3/tests/windows.exe
 #############################################
 # Folder: C:/Users/Microwonk/Dev/VulkanGameEngine/cmake-build-debug
 
-build all: phony bin/VulkanProject.exe lib/glfw3/all
+build all: phony bin/TanookiEngine.exe lib/glfw3/all
 
 # =============================================================================
 

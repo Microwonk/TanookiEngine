@@ -208,7 +208,7 @@ CMAKE_PROJECT_DESCRIPTION:STATIC=
 CMAKE_PROJECT_HOMEPAGE_URL:STATIC=
 
 //Value Computed by CMake
-CMAKE_PROJECT_NAME:STATIC=VulkanProject
+CMAKE_PROJECT_NAME:STATIC=TanookiEngine
 
 //Value Computed by CMake
 CMAKE_PROJECT_VERSION:STATIC=3.3.8
@@ -334,6 +334,15 @@ GLFW_USE_HYBRID_HPG:BOOL=OFF
 
 //Assume the Vulkan loader is linked with the application
 GLFW_VULKAN_STATIC:BOOL=OFF
+
+//Value Computed by CMake
+TanookiEngine_BINARY_DIR:STATIC=C:/Users/Microwonk/Dev/VulkanGameEngine/cmake-build-debug
+
+//Value Computed by CMake
+TanookiEngine_IS_TOP_LEVEL:STATIC=ON
+
+//Value Computed by CMake
+TanookiEngine_SOURCE_DIR:STATIC=C:/Users/Microwonk/Dev/VulkanGameEngine
 
 //Value Computed by CMake
 VulkanProject_BINARY_DIR:STATIC=C:/Users/Microwonk/Dev/VulkanGameEngine/cmake-build-debug
