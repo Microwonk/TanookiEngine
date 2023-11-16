@@ -1,0 +1,361 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="CMakePresetLoader">{
+  &quot;useNewFormat&quot;: true
+}</component>
+  <component name="CMakeReloadState">
+    <option name="reloaded" value="true" />
+  </component>
+  <component name="CMakeRunConfigurationManager">
+    <generated>
+      <config projectName="VulkanProject" targetName="tearing" />
+      <config projectName="VulkanProject" targetName="empty" />
+      <config projectName="VulkanProject" targetName="glfw" />
+      <config projectName="VulkanProject" targetName="title" />
+      <config projectName="VulkanProject" targetName="heightmap" />
+      <config projectName="VulkanProject" targetName="icon" />
+      <config projectName="VulkanProject" targetName="events" />
+      <config projectName="VulkanProject" targetName="offscreen" />
+      <config projectName="VulkanProject" targetName="gamma" />
+      <config projectName="VulkanProject" targetName="CompileShaders" />
+      <config projectName="VulkanProject" targetName="opacity" />
+      <config projectName="VulkanProject" targetName="VulkanProject" />
+      <config projectName="VulkanProject" targetName="splitview" />
+      <config projectName="VulkanProject" targetName="msaa" />
+      <config projectName="VulkanProject" targetName="simple" />
+      <config projectName="VulkanProject" targetName="glfwinfo" />
+      <config projectName="VulkanProject" targetName="wave" />
+      <config projectName="VulkanProject" targetName="cursor" />
+      <config projectName="VulkanProject" targetName="clipboard" />
+      <config projectName="VulkanProject" targetName="windows" />
+      <config projectName="VulkanProject" targetName="gears" />
+      <config projectName="VulkanProject" targetName="threads" />
+      <config projectName="VulkanProject" targetName="sharing" />
+      <config projectName="VulkanProject" targetName="uninstall" />
+      <config projectName="VulkanProject" targetName="reopen" />
+      <config projectName="VulkanProject" targetName="monitors" />
+      <config projectName="VulkanProject" targetName="update_mappings" />
+      <config projectName="VulkanProject" targetName="boing" />
+      <config projectName="VulkanProject" targetName="particles" />
+      <config projectName="VulkanProject" targetName="inputlag" />
+      <config projectName="VulkanProject" targetName="triangle-vulkan" />
+      <config projectName="VulkanProject" targetName="timeout" />
+      <config projectName="VulkanProject" targetName="iconify" />
+      <config projectName="VulkanProject" targetName="joysticks" />
+    </generated>
+  </component>
+  <component name="CMakeSettings">
+    <configurations>
+      <configuration PROFILE_NAME="Debug" ENABLED="true" CONFIG_NAME="Debug" />
+    </configurations>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="3fbe15fd-0b69-455b-bac8-e2e0501b23e2" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/VulkanGameEngine.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug/lib/glfw3/src/glfw_config.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shaders/simple_shader.frag" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shaders/simple_shader.vert" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/tnk_pipeline.hpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VulkanGameEngine.sln" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VulkanGameEngine.vcxproj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VulkanGameEngine.vcxproj.filters" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ClangdSettings">
+    <option name="formatViaClangd" value="false" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectApplicationVersion">
+    <option name="ide" value="CLion" />
+    <option name="majorVersion" value="2023" />
+    <option name="minorVersion" value="2" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 0
+}</component>
+  <component name="ProjectId" id="2YGf8lDlqn1LPv1siEgKuwxjssT" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "ASKED_MARK_IGNORED_FILES_AS_EXCLUDED": "true",
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.cidr.known.project.marker": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "cf.first.check.clang-format": "false",
+    "cidr.known.project.marker": "true",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "C:/Users/Microwonk/Dev/VulkanGameEngine",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RunManager" selected="CMake Application.VulkanProject">
+    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true">
+      <method v="2">
+        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CompileShaders" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="VulkanProject" TARGET_NAME="CompileShaders" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="VulkanProject" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="VulkanProject" TARGET_NAME="VulkanProject" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="VulkanProject" RUN_TARGET_NAME="VulkanProject">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="boing" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="VulkanProject" TARGET_NAME="boing" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="VulkanProject" RUN_TARGET_NAME="boing">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="clipboard" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="VulkanProject" TARGET_NAME="clipboard" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="VulkanProject" RUN_TARGET_NAME="clipboard">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="cursor" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="VulkanProject" TARGET_NAME="cursor" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="VulkanProject" RUN_TARGET_NAME="cursor">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="empty" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="VulkanProject" TARGET_NAME="empty" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="VulkanProject" RUN_TARGET_NAME="empty">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="events" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="VulkanProject" TARGET_NAME="events" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="VulkanProject" RUN_TARGET_NAME="events">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="gamma" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="VulkanProject" TARGET_NAME="gamma" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="VulkanProject" RUN_TARGET_NAME="gamma">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="gears" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="VulkanProject" TARGET_NAME="gears" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="VulkanProject" RUN_TARGET_NAME="gears">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="glfw" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="VulkanProject" TARGET_NAME="glfw" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="glfwinfo" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="VulkanProject" TARGET_NAME="glfwinfo" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="VulkanProject" RUN_TARGET_NAME="glfwinfo">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="heightmap" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="VulkanProject" TARGET_NAME="heightmap" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="VulkanProject" RUN_TARGET_NAME="heightmap">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="icon" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="VulkanProject" TARGET_NAME="icon" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="VulkanProject" RUN_TARGET_NAME="icon">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="iconify" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="VulkanProject" TARGET_NAME="iconify" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="VulkanProject" RUN_TARGET_NAME="iconify">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="inputlag" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="VulkanProject" TARGET_NAME="inputlag" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="VulkanProject" RUN_TARGET_NAME="inputlag">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="joysticks" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="VulkanProject" TARGET_NAME="joysticks" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="VulkanProject" RUN_TARGET_NAME="joysticks">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="monitors" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="VulkanProject" TARGET_NAME="monitors" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="VulkanProject" RUN_TARGET_NAME="monitors">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="msaa" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="VulkanProject" TARGET_NAME="msaa" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="VulkanProject" RUN_TARGET_NAME="msaa">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="offscreen" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="VulkanProject" TARGET_NAME="offscreen" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="VulkanProject" RUN_TARGET_NAME="offscreen">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="opacity" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="VulkanProject" TARGET_NAME="opacity" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="VulkanProject" RUN_TARGET_NAME="opacity">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="particles" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="VulkanProject" TARGET_NAME="particles" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="VulkanProject" RUN_TARGET_NAME="particles">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="reopen" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="VulkanProject" TARGET_NAME="reopen" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="VulkanProject" RUN_TARGET_NAME="reopen">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="sharing" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="VulkanProject" TARGET_NAME="sharing" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="VulkanProject" RUN_TARGET_NAME="sharing">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="simple" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="VulkanProject" TARGET_NAME="simple" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="VulkanProject" RUN_TARGET_NAME="simple">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="splitview" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="VulkanProject" TARGET_NAME="splitview" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="VulkanProject" RUN_TARGET_NAME="splitview">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="tearing" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="VulkanProject" TARGET_NAME="tearing" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="VulkanProject" RUN_TARGET_NAME="tearing">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="threads" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="VulkanProject" TARGET_NAME="threads" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="VulkanProject" RUN_TARGET_NAME="threads">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="timeout" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="VulkanProject" TARGET_NAME="timeout" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="VulkanProject" RUN_TARGET_NAME="timeout">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="title" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="VulkanProject" TARGET_NAME="title" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="VulkanProject" RUN_TARGET_NAME="title">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="triangle-vulkan" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="VulkanProject" TARGET_NAME="triangle-vulkan" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="VulkanProject" RUN_TARGET_NAME="triangle-vulkan">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="uninstall" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="VulkanProject" TARGET_NAME="uninstall" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="update_mappings" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="VulkanProject" TARGET_NAME="update_mappings" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="wave" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="VulkanProject" TARGET_NAME="wave" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="VulkanProject" RUN_TARGET_NAME="wave">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="windows" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="VulkanProject" TARGET_NAME="windows" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="VulkanProject" RUN_TARGET_NAME="windows">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="CMake Application.CompileShaders" />
+      <item itemvalue="CMake Application.VulkanProject" />
+      <item itemvalue="CMake Application.uninstall" />
+      <item itemvalue="CMake Application.boing" />
+      <item itemvalue="CMake Application.gears" />
+      <item itemvalue="CMake Application.heightmap" />
+      <item itemvalue="CMake Application.offscreen" />
+      <item itemvalue="CMake Application.particles" />
+      <item itemvalue="CMake Application.sharing" />
+      <item itemvalue="CMake Application.simple" />
+      <item itemvalue="CMake Application.splitview" />
+      <item itemvalue="CMake Application.wave" />
+      <item itemvalue="CMake Application.glfw" />
+      <item itemvalue="CMake Application.update_mappings" />
+      <item itemvalue="CMake Application.clipboard" />
+      <item itemvalue="CMake Application.cursor" />
+      <item itemvalue="CMake Application.empty" />
+      <item itemvalue="CMake Application.events" />
+      <item itemvalue="CMake Application.gamma" />
+      <item itemvalue="CMake Application.glfwinfo" />
+      <item itemvalue="CMake Application.icon" />
+      <item itemvalue="CMake Application.iconify" />
+      <item itemvalue="CMake Application.inputlag" />
+      <item itemvalue="CMake Application.joysticks" />
+      <item itemvalue="CMake Application.monitors" />
+      <item itemvalue="CMake Application.msaa" />
+      <item itemvalue="CMake Application.opacity" />
+      <item itemvalue="CMake Application.reopen" />
+      <item itemvalue="CMake Application.tearing" />
+      <item itemvalue="CMake Application.threads" />
+      <item itemvalue="CMake Application.timeout" />
+      <item itemvalue="CMake Application.title" />
+      <item itemvalue="CMake Application.triangle-vulkan" />
+      <item itemvalue="CMake Application.windows" />
+    </list>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="3fbe15fd-0b69-455b-bac8-e2e0501b23e2" name="Changes" comment="" />
+      <created>1700156679555</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1700156679555</updated>
+      <workItem from="1700156680595" duration="2415000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VCPKGProject">
+    <isAutomaticEditVcpkgJson value="false" />
+    <isAutomaticCheckingOnLaunch value="false" />
+    <isAutomaticFoundErrors value="true" />
+    <isAutomaticFoundErrors value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+</project>
