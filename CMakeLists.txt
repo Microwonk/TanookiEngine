@@ -1,5 +1,8 @@
 cmake_minimum_required(VERSION 3.12)
-project(VulkanProject)
+
+set(EngineName "TanookiEngine")
+
+project(${EngineName})
 
 # Collect all .cpp and .hpp files from the src directory
 file(GLOB_RECURSE SOURCES "src/*.cpp" "src/*.hpp")
@@ -16,41 +19,56 @@ find_package(Vulkan REQUIRED)
 # Add the shaders directory to the source files (for IDEs that support it)
 file(GLOB SHADERS shaders/*.spv)
 
+# Remove existing shader assets in build directory for CLEAN
+file(GLOB EXISTING_SHADERS ${CMAKE_BINARY_DIR}/shaders/*.spv)
+if(EXISTING_SHADERS)
+    message(STATUS "Removing existing shaders in the build directory...")
+    file(REMOVE ${EXISTING_SHADERS})
+endif()
+
 # Set the executable
-add_executable(VulkanProject ${SOURCES} ${SHADERS}
-        src/tnk_pipeline.hpp)
+add_executable(${EngineName} ${SOURCES} ${SHADERS})
 
 # Add a custom target to compile shaders
 add_custom_target(CompileShaders
-        COMMAND cmd compile.bat
+        COMMAND ${CMAKE_COMMAND} -E chdir ${CMAKE_SOURCE_DIR} cmd /c compile.bat
         COMMENT "Compiling shaders"
         VERBATIM
 )
+
 # Add CompileShaders as a dependency for VulkanProject
-add_dependencies(VulkanProject CompileShaders)
+add_dependencies(${EngineName} CompileShaders)
+
+# Copy only .spv files to build directory after compilation
+file(GLOB_RECURSE SPV_FILES ${CMAKE_SOURCE_DIR}/shaders/*.spv)
+
+add_custom_command(TARGET CompileShaders POST_BUILD
+        COMMAND ${CMAKE_COMMAND} -E make_directory ${CMAKE_BINARY_DIR}/shaders
+        COMMAND ${CMAKE_COMMAND} -E copy_if_different ${SPV_FILES} ${CMAKE_BINARY_DIR}/shaders
+        COMMENT "Copying .spv files to build directory"
+)
+
+
 
 # Add the GLFW subdirectory
 add_subdirectory(lib/glfw3)
 
 # Link libraries
-target_link_libraries(VulkanProject
+target_link_libraries(${EngineName}
     Vulkan::Vulkan
     glfw
 )
 
 # Set compiler options
 if (MSVC)
-    target_compile_options(VulkanProject PRIVATE /W4)
+    target_compile_options(${EngineName} PRIVATE /W4)
 else()
-    target_compile_options(VulkanProject PRIVATE -Wall -Wextra -pedantic)
+    target_compile_options(${EngineName} PRIVATE -Wall -Wextra -pedantic)
 endif()
 
 # Set output directories for binaries
-set_target_properties(VulkanProject PROPERTIES
+set_target_properties(${EngineName} PROPERTIES
     RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin
     LIBRARY_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/lib
     ARCHIVE_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/lib
 )
-
-# Copy shaders to build directory
-file(COPY shaders DESTINATION ${CMAKE_BINARY_DIR})
