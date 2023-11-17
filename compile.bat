@@ -13,6 +13,7 @@ del /Q %SHADERS_DIR%\*.spv
 :: Compile all shaders in the directory
 for %%f in (%SHADERS_DIR%\*.*) do (
     %GLSLC_PATH% "%%f" -o %SHADERS_DIR%\%%~nxf.spv
+    echo "%%f" has been compiled to "%SHADERS_DIR%\%%~nxf.spv"
 )
 
 endlocal

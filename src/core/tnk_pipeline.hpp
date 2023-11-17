@@ -1,7 +1,7 @@
 #pragma once
 
 #include "tnk_device.hpp"
-
+#include "tnk_model.hpp"
 
 #include <string>
 #include <vector>
@@ -15,14 +15,18 @@ namespace tnk {
     static const std::string shaderDir = "../shaders/";
 
     struct PipeLineConfigInfo {
-        VkViewport viewport;
-        VkRect2D scissor;
+        PipeLineConfigInfo(const PipeLineConfigInfo &) = delete;
+        PipeLineConfigInfo &operator=(const PipeLineConfigInfo &) = delete;
+
+        VkPipelineViewportStateCreateInfo viewportInfo;
         VkPipelineInputAssemblyStateCreateInfo inputAssemblyInfo;
         VkPipelineRasterizationStateCreateInfo rasterizationInfo;
         VkPipelineMultisampleStateCreateInfo multisampleInfo;
         VkPipelineColorBlendAttachmentState colorBlendAttachment;
         VkPipelineColorBlendStateCreateInfo colorBlendInfo;
         VkPipelineDepthStencilStateCreateInfo depthStencilInfo;
+        std::vector<VkDynamicState> dynamicStateEnables;
+        VkPipelineDynamicStateCreateInfo dynamicStateInfo;
         VkPipelineLayout pipelineLayout = nullptr;
         VkRenderPass renderPass = nullptr;
         uint32_t subpass = 0;
@@ -40,11 +44,11 @@ namespace tnk {
         // no accidental copies
         TnkPipeline(const TnkPipeline &) = delete;
 
-        void operator=(const TnkPipeline &) = delete;
+        TnkPipeline &operator=(const TnkPipeline &) = delete;
 
         void bind(VkCommandBuffer commandBuffer);
 
-        static PipeLineConfigInfo defaultPipelineConfigInfo(uint32_t width, uint32_t height);
+        static void defaultPipelineConfigInfo(PipeLineConfigInfo &configInfo);
 
     private:
         static std::vector<char> readFile(const std::string &filePath);

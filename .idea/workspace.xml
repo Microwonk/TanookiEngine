@@ -54,58 +54,37 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3fbe15fd-0b69-455b-bac8-e2e0501b23e2" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/core/simple_render_system.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/core/simple_render_system.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/core/tnk_game_object.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/core/tnk_model.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/core/tnk_model.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/core/tnk_renderer.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/core/tnk_renderer.hpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/cache-v2-1b53d26fe06612111dfc.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/codemodel-v2-d2bf86938b8ee7b0ba85.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/index-2023-11-16T18-44-23-0332.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/target-CompileShaders-Debug-0f307a970c50965fb99e.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/target-VulkanProject-Debug-919d850f41a98e018ad8.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/target-boing-Debug-8439c0523a66f9c63a74.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/target-clipboard-Debug-91e4a59a56cb4247d1bf.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/target-cursor-Debug-df6871fe8262cbe91500.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/target-empty-Debug-4bba0ff6d57a4c2bcc2b.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/target-events-Debug-36514ac12db358a36113.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/target-gamma-Debug-846314fcd31dc9b30f2f.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/target-gears-Debug-14f9871f6c9371db7c64.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/target-glfw-Debug-a9bb8e80ecf038f02cbf.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/target-glfwinfo-Debug-5f0c8d35600df0080723.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/target-heightmap-Debug-c38a92ac97cc06acc350.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/target-icon-Debug-05c1de5dc349d43e93c8.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/target-iconify-Debug-bda76440f2469dde62ec.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/target-inputlag-Debug-a83d7e111d85c4fea91f.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/target-joysticks-Debug-17f5a91643bc1cc66e23.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/target-monitors-Debug-c33c94a5f557c49ee1b4.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/target-msaa-Debug-5c10da2668f1cce8b054.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/target-offscreen-Debug-8338c6887fe0620cbc6e.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/target-opacity-Debug-ff9566516c941bace159.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/target-particles-Debug-bfdd239da39fb9621f93.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/target-reopen-Debug-709459fb6421704a2757.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/target-sharing-Debug-a7c282f5554bf236c873.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/target-simple-Debug-404459acb19abe50f730.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/target-splitview-Debug-887d228de5d73049edd0.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/target-tearing-Debug-3b89519a3be224bd7ea6.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/target-threads-Debug-9b9239c33218f405ffad.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/target-timeout-Debug-827ade72adec0241b003.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/target-title-Debug-1ba46486b0a27d641e58.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/target-triangle-vulkan-Debug-123c053d50f0f10ee38a.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/target-wave-Debug-8b940817b6a530128b98.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/target-windows-Debug-026cf8cf577fbb90b899.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TargetDirectories.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TargetDirectories.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/VulkanProject.dir/src/first_app.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/VulkanProject.dir/src/first_app.cpp.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/VulkanProject.dir/src/main.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/VulkanProject.dir/src/main.cpp.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/VulkanProject.dir/src/tnk_window.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/VulkanProject.dir/src/tnk_window.cpp.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rules.ninja" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rules.ninja" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/bin/VulkanProject.exe" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/bin/VulkanProject.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/build.ninja" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/build.ninja" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/shaders/simple_shader.frag" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/shaders/simple_shader.frag.spv" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/shaders/simple_shader.frag.spv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/shaders/simple_shader.vert" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/shaders/simple_shader.vert.spv" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/shaders/simple_shader.vert.spv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/compile.bat" beforeDir="false" afterPath="$PROJECT_DIR$/compile.bat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shaders/simple_shader.frag" beforeDir="false" afterPath="$PROJECT_DIR$/shaders/simple_shader.frag" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shaders/simple_shader.frag.spv" beforeDir="false" afterPath="$PROJECT_DIR$/shaders/simple_shader.frag.spv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shaders/simple_shader.vert" beforeDir="false" afterPath="$PROJECT_DIR$/shaders/simple_shader.vert" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shaders/simple_shader.vert.spv" beforeDir="false" afterPath="$PROJECT_DIR$/shaders/simple_shader.vert.spv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/first_app.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/first_app.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/first_app.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/first_app.hpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/tnk_device.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/tnk_device.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/tnk_device.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/tnk_device.hpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/tnk_pipeline.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/tnk_pipeline.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/tnk_pipeline.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/tnk_pipeline.hpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/tnk_swap_chain.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/tnk_swap_chain.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/tnk_swap_chain.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/tnk_swap_chain.hpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/tnk_window.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/tnk_window.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/tnk_window.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/tnk_window.hpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -138,30 +117,32 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "ASKED_MARK_IGNORED_FILES_AS_EXCLUDED": "true",
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.cidr.known.project.marker": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "cf.first.check.clang-format": "false",
-    "cidr.known.project.marker": "true",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "C:/Users/Microwonk/Dev/VulkanGameEngine",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "settings.editor.selected.configurable": "Errors",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;ASKED_MARK_IGNORED_FILES_AS_EXCLUDED&quot;: &quot;true&quot;,
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;cf.first.check.clang-format&quot;: &quot;false&quot;,
+    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Microwonk/Dev/VulkanGameEngine&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;Errors&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Microwonk\Dev\VulkanGameEngine\src\core" />
       <recent name="C:\Users\Microwonk\Dev\VulkanGameEngine\src" />
     </key>
   </component>
@@ -169,7 +150,7 @@
     <configuration name="compile" type="BatchConfigurationType" factoryName="Batch" temporary="true">
       <module name="VulkanGameEngine" />
       <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="WORKING_DIRECTORY" value="C:\Users\Microwonk\Dev\VulkanGameEngine" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="PARENT_ENVS" value="true" />
       <option name="SCRIPT_NAME" value="compile.bat" />
       <option name="PARAMETERS" value="" />
@@ -401,12 +382,18 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1700156679555</updated>
-      <workItem from="1700156680595" duration="16076000" />
+      <workItem from="1700156680595" duration="16190000" />
+      <workItem from="1700208292199" duration="20103000" />
+      <workItem from="1700237307813" duration="6570000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="dependencySupport" implementationName="executable:docker" />
+    <option featureType="dependencySupport" implementationName="executable:kubectl" />
   </component>
   <component name="VCPKGProject">
     <isAutomaticEditVcpkgJson value="false" />

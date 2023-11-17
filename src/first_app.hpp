@@ -1,9 +1,16 @@
 #pragma once
 
-#include "tnk_window.hpp"
-#include "tnk_pipeline.hpp"
-#include "tnk_device.hpp"
-#include "tnk_swap_chain.hpp"
+#include "core/tnk_window.hpp"
+#include "core/tnk_device.hpp"
+#include "core/tnk_renderer.hpp"
+#include "core/tnk_model.hpp"
+#include "core/tnk_game_object.hpp"
+#include "core/simple_render_system.hpp"
+
+#define GLM_FORCE_RADIANS
+#define GLM_FORCE_DEPTH_ZERO_TO_ONE // openGL uses -1 to 0, this uses 0 to 1
+#include <glm/glm.hpp>
+#include <glm/gtc/constants.hpp>
 
 #include <memory>
 #include <vector>
@@ -26,18 +33,14 @@ namespace tnk
         float fps();
 
 	private:
-        void createPipelineLayout();
-        void createPipeline();
-        void createCommandBuffers();
-        void drawFrame();
+        void loadGameObjects();
 
         int tnkFps;
 
 		TnkWindow tnkWindow{ WIDTH, HEIGHT, "Hello Vulkan!" };
         TnkDevice tnkDevice{tnkWindow};
-        TnkSwapChain tnkSwapChain{tnkDevice, tnkWindow.getExtent()};
-        std::unique_ptr<TnkPipeline> tnkPipeline;
-        VkPipelineLayout pipelineLayout;
-        std::vector<VkCommandBuffer> commandBuffers;
+        TnkRenderer tnkRenderer{tnkWindow, tnkDevice};
+
+        std::vector<TnkGameObject> gameObjects;
 	};
 }
