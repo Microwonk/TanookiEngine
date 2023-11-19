@@ -3,8 +3,7 @@
 namespace tnk {
 
     struct SimplePushConstantData {
-        glm::mat2 transform{1.f};
-        glm::vec2 offset;
+        glm::mat4 transform{1.f};
         alignas(16) glm::vec3 color;
     };
 
@@ -49,13 +48,15 @@ namespace tnk {
                 "simple_shader.frag.spv");
     }
 
-    void SimpleRenderSystem::renderGameObjects(VkCommandBuffer commandBuffer, std::vector<TnkGameObject> &gameObjects) {
+    void SimpleRenderSystem::renderGameObjects(VkCommandBuffer commandBuffer, std::vector<TnkGameObject> &gameObjects, const TnkCamera &camera) {
         tnkPipeline->bind(commandBuffer);
+
+        auto projectionView = camera.getProjectionMatrix() * camera.getViewMatrix();
+
         for (auto& obj: gameObjects) {
             SimplePushConstantData push{};
-            push.offset = obj.transform2d.translation;
             push.color = obj.color;
-            push.transform = obj.transform2d.mat2();
+            push.transform = projectionView * obj.transform.mat4();
 
             vkCmdPushConstants(commandBuffer,
                                pipelineLayout,

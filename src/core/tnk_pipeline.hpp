@@ -2,6 +2,7 @@
 
 #include "tnk_device.hpp"
 #include "tnk_model.hpp"
+#include "tnk_constants.hpp"
 
 #include <string>
 #include <vector>
@@ -11,8 +12,6 @@
 #include <cassert>
 
 namespace tnk {
-
-    static const std::string shaderDir = "../shaders/";
 
     struct PipeLineConfigInfo {
         PipeLineConfigInfo(const PipeLineConfigInfo &) = delete;

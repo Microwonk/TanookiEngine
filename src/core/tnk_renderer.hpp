@@ -18,6 +18,7 @@ namespace tnk
         ~TnkRenderer();
 
         VkRenderPass getSwapChainRenderPass() const { return tnkSwapChain->getRenderPass(); }
+        float getAspectRatio() const { return tnkSwapChain->extentAspectRatio(); }
         bool isFrameInProgress() const { return isFrameStarted; }
 
         VkCommandBuffer getCurrentCommandBuffer() const {
@@ -37,6 +38,7 @@ namespace tnk
         void endFrame();
         void beginSwapChainRenderPass(VkCommandBuffer commandBuffer);
         void endSwapChainRenderPass(VkCommandBuffer commandBuffer);
+        void setClearColor(glm::vec3 color) { clearColor = color; }
 
     private:
         void createCommandBuffers();
@@ -51,5 +53,6 @@ namespace tnk
         uint32_t currentImageIndex;
         int currentFrameIndex{0};
         bool isFrameStarted{false};
+        glm::vec3 clearColor{};
     };
 }

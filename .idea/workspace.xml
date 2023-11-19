@@ -54,37 +54,46 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3fbe15fd-0b69-455b-bac8-e2e0501b23e2" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/core/simple_render_system.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/core/simple_render_system.hpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/core/tnk_game_object.hpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/core/tnk_model.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/core/tnk_model.hpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/core/tnk_renderer.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/core/tnk_renderer.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/models/colored_cube.obj" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/models/cube.obj" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/models/flat_vase.obj" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/models/smooth_vase.obj" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/tiny_obj_loader/tiny_obj_loader.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/core/tnk_camera.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/core/tnk_camera.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/core/tnk_constants.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/core/tnk_controller.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/core/tnk_controller.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/core/tnk_utils.hpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rules.ninja" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rules.ninja" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/bin/VulkanProject.exe" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/build.ninja" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/build.ninja" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/shaders/simple_shader.frag.spv" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/shaders/simple_shader.frag.spv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/shaders/simple_shader.vert.spv" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/shaders/simple_shader.vert.spv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/compile.bat" beforeDir="false" afterPath="$PROJECT_DIR$/compile.bat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/shaders/simple_shader.frag" beforeDir="false" afterPath="$PROJECT_DIR$/shaders/simple_shader.frag" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/shaders/simple_shader.frag.spv" beforeDir="false" afterPath="$PROJECT_DIR$/shaders/simple_shader.frag.spv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/shaders/simple_shader.vert" beforeDir="false" afterPath="$PROJECT_DIR$/shaders/simple_shader.vert" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/shaders/simple_shader.vert.spv" beforeDir="false" afterPath="$PROJECT_DIR$/shaders/simple_shader.vert.spv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/core/simple_render_system.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/simple_render_system.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/core/simple_render_system.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/simple_render_system.hpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/core/tnk_device.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/tnk_device.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/core/tnk_game_object.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/tnk_game_object.hpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/core/tnk_model.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/tnk_model.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/core/tnk_model.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/tnk_model.hpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/core/tnk_pipeline.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/tnk_pipeline.hpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/core/tnk_renderer.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/tnk_renderer.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/core/tnk_renderer.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/tnk_renderer.hpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/core/tnk_swap_chain.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/tnk_swap_chain.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/core/tnk_window.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/tnk_window.hpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/first_app.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/first_app.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/first_app.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/first_app.hpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tnk_device.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/tnk_device.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tnk_device.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/tnk_device.hpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tnk_pipeline.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/tnk_pipeline.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tnk_pipeline.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/tnk_pipeline.hpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tnk_swap_chain.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/tnk_swap_chain.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tnk_swap_chain.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/tnk_swap_chain.hpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tnk_window.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/tnk_window.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tnk_window.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/tnk_window.hpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/main.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -96,6 +105,11 @@
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -129,7 +143,7 @@
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;cf.first.check.clang-format&quot;: &quot;false&quot;,
     &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;3d&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;last_opened_file_path&quot;: &quot;C:/Users/Microwonk/Dev/VulkanGameEngine&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
@@ -142,6 +156,7 @@
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Microwonk\Dev\VulkanGameEngine\lib\tiny_obj_loader" />
       <recent name="C:\Users\Microwonk\Dev\VulkanGameEngine\src\core" />
       <recent name="C:\Users\Microwonk\Dev\VulkanGameEngine\src" />
     </key>
@@ -371,6 +386,7 @@
     <recent_temporary>
       <list>
         <item itemvalue="Batch.compile" />
+        <item itemvalue="Batch.compile" />
       </list>
     </recent_temporary>
   </component>
@@ -384,7 +400,10 @@
       <updated>1700156679555</updated>
       <workItem from="1700156680595" duration="16190000" />
       <workItem from="1700208292199" duration="20103000" />
-      <workItem from="1700237307813" duration="6570000" />
+      <workItem from="1700237307813" duration="7210000" />
+      <workItem from="1700301136779" duration="15148000" />
+      <workItem from="1700322137179" duration="6232000" />
+      <workItem from="1700389279292" duration="9998000" />
     </task>
     <servers />
   </component>

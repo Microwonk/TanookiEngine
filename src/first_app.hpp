@@ -6,6 +6,8 @@
 #include "core/tnk_model.hpp"
 #include "core/tnk_game_object.hpp"
 #include "core/simple_render_system.hpp"
+#include "core/tnk_camera.hpp"
+#include "core/tnk_controller.hpp"
 
 #define GLM_FORCE_RADIANS
 #define GLM_FORCE_DEPTH_ZERO_TO_ONE // openGL uses -1 to 0, this uses 0 to 1
@@ -20,8 +22,8 @@ namespace tnk
 	class FirstApp
 	{
 	public:
-		static constexpr int WIDTH = 800;
-		static constexpr int HEIGHT = 600;
+		static constexpr int WIDTH = 1280;
+		static constexpr int HEIGHT = 720;
 
         FirstApp();
         ~FirstApp();
@@ -37,7 +39,7 @@ namespace tnk
 
         int tnkFps;
 
-		TnkWindow tnkWindow{ WIDTH, HEIGHT, "Hello Vulkan!" };
+		TnkWindow tnkWindow{ WIDTH, HEIGHT, "Debug Game" };
         TnkDevice tnkDevice{tnkWindow};
         TnkRenderer tnkRenderer{tnkWindow, tnkDevice};
 
