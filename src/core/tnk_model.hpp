@@ -7,6 +7,7 @@
 #define GLM_FORCE_RADIANS
 #define GLM_FORCE_DEPTH_ZERO_TO_ONE // openGL uses -1 to 0, this uses 0 to 1
 #include "glm/glm.hpp"
+#include "tnk_buffer.hpp"
 
 #define GLM_ENABLE_EXPERIMENTAL // for hashing
 #include <glm/gtx/hash.hpp>
@@ -39,13 +40,13 @@ namespace tnk {
             void loadModel(const std::string &filepath);
         };
 
-        TnkModel(TnkDevice &device, const TnkModel::Builder &builder, bool staging = false);
+        TnkModel(TnkDevice &device, const TnkModel::Builder &builder, bool staging = true);
         ~TnkModel();
 
         TnkModel(const TnkModel &) = delete;
         TnkModel &operator=(const TnkModel &) = delete;
 
-        static std::unique_ptr<TnkModel> createModelFromFile(TnkDevice &device, const std::string &filepath);
+        static std::unique_ptr<TnkModel> createModelFromFile(TnkDevice &device, const std::string &filepath, bool staging = true);
 
         void bind(VkCommandBuffer commandBuffer);
         void draw(VkCommandBuffer commandBuffer);
@@ -58,13 +59,11 @@ namespace tnk {
 
         TnkDevice& tnkDevice;
 
-        VkBuffer vertexBuffer;
-        VkDeviceMemory vertexBufferMemory;
+        std::unique_ptr<TnkBuffer> vertexBuffer;
         uint32_t vertexCount;
 
         bool hasIndexBuffer{false};
-        VkBuffer indexBuffer;
-        VkDeviceMemory indexBufferMemory;
+        std::unique_ptr<TnkBuffer> indexBuffer;
         uint32_t indexCount;
     };
 }

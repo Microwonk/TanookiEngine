@@ -3,8 +3,8 @@
 namespace tnk {
     void TnkController::moveInPlaneXZ(GLFWwindow *window, float deltaTime, tnk::TnkGameObject &gameObject) {
 
-        if (glfwGetKey(window, GLFW_KEY_LEFT_CONTROL) == GLFW_PRESS) moveSpeed = 5.f;
-        else moveSpeed = 3.f;
+        if (glfwGetKey(window, GLFW_KEY_LEFT_CONTROL) == GLFW_PRESS) moveSpeed = 40.f;
+        else moveSpeed = 20.f;
 
 
         if (glfwGetKey(window, keys.close) == GLFW_PRESS) glfwSetWindowShouldClose(window, true);

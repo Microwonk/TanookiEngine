@@ -19,8 +19,8 @@ namespace tnk {
         void moveInPlaneXZ(GLFWwindow* window, float deltaTime, TnkGameObject& gameObject);
 
         KeyMappings keys{};
-        float moveSpeed{3.f};
-        float lookSpeed{5.f};
+        float moveSpeed{8.f};
+        float lookSpeed{8.f};
         float lastMouseX{0.f};
         float lastMouseY{0.f};
     };

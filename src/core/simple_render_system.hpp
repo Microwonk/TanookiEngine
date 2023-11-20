@@ -5,6 +5,7 @@
 #include "tnk_model.hpp"
 #include "tnk_game_object.hpp"
 #include "tnk_camera.hpp"
+#include "tnk_frame_info.hpp"
 
 #define GLM_FORCE_RADIANS
 #define GLM_FORCE_DEPTH_ZERO_TO_ONE // openGL uses -1 to 0, this uses 0 to 1
@@ -25,7 +26,7 @@ namespace tnk
         SimpleRenderSystem(const SimpleRenderSystem &) = delete;
         SimpleRenderSystem &operator=(const SimpleRenderSystem &) = delete;
 
-        void renderGameObjects(VkCommandBuffer commandBuffer, std::vector<TnkGameObject> &gameObjects, const TnkCamera &camera);
+        void renderGameObjects(FrameInfo &frameInfo, std::vector<TnkGameObject> &gameObjects);
 
     private:
         void createPipelineLayout();

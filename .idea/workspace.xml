@@ -54,25 +54,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3fbe15fd-0b69-455b-bac8-e2e0501b23e2" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/assets/models/colored_cube.obj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/models/cube.obj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/models/flat_vase.obj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/models/smooth_vase.obj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/tiny_obj_loader/tiny_obj_loader.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/core/tnk_camera.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/core/tnk_camera.hpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/core/tnk_constants.hpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/core/tnk_controller.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/core/tnk_controller.hpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/core/tnk_utils.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/core/tnk_buffer.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/core/tnk_buffer.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/core/tnk_frame_info.hpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-Debug-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-Debug-log.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rules.ninja" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rules.ninja" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/bin/VulkanProject.exe" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/build.ninja" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/build.ninja" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/shaders/simple_shader.frag.spv" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/shaders/simple_shader.frag.spv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/shaders/simple_shader.vert.spv" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/shaders/simple_shader.vert.spv" afterDir="false" />
@@ -82,18 +73,12 @@
       <change beforePath="$PROJECT_DIR$/shaders/simple_shader.vert.spv" beforeDir="false" afterPath="$PROJECT_DIR$/shaders/simple_shader.vert.spv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/core/simple_render_system.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/simple_render_system.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/core/simple_render_system.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/simple_render_system.hpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/core/tnk_device.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/tnk_device.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/core/tnk_controller.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/tnk_controller.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/core/tnk_controller.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/tnk_controller.hpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/core/tnk_game_object.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/tnk_game_object.hpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/core/tnk_model.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/tnk_model.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/core/tnk_model.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/tnk_model.hpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/core/tnk_pipeline.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/tnk_pipeline.hpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/core/tnk_renderer.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/tnk_renderer.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/core/tnk_renderer.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/tnk_renderer.hpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/core/tnk_swap_chain.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/tnk_swap_chain.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/core/tnk_window.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/tnk_window.hpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/first_app.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/first_app.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/first_app.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/first_app.hpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/main.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -171,17 +156,17 @@
       <option name="PARAMETERS" value="" />
       <method v="2" />
     </configuration>
-    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true">
-      <method v="2">
-        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="CompileShaders" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="TanookiEngine" TARGET_NAME="CompileShaders" CONFIG_NAME="Debug">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
     <configuration name="TanookiEngine" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="TanookiEngine" TARGET_NAME="TanookiEngine" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="TanookiEngine" RUN_TARGET_NAME="TanookiEngine">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
@@ -403,7 +388,8 @@
       <workItem from="1700237307813" duration="7210000" />
       <workItem from="1700301136779" duration="15148000" />
       <workItem from="1700322137179" duration="6232000" />
-      <workItem from="1700389279292" duration="9998000" />
+      <workItem from="1700389279292" duration="10080000" />
+      <workItem from="1700477915879" duration="9934000" />
     </task>
     <servers />
   </component>

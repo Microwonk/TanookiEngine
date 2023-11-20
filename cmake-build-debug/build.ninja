@@ -63,6 +63,13 @@ build CMakeFiles/TanookiEngine.dir/src/core/simple_render_system.cpp.obj: CXX_CO
   OBJECT_DIR = CMakeFiles\TanookiEngine.dir
   OBJECT_FILE_DIR = CMakeFiles\TanookiEngine.dir\src\core
 
+build CMakeFiles/TanookiEngine.dir/src/core/tnk_buffer.cpp.obj: CXX_COMPILER__TanookiEngine_unscanned_Debug C$:/Users/Microwonk/Dev/VulkanGameEngine/src/core/tnk_buffer.cpp || cmake_object_order_depends_target_TanookiEngine
+  DEP_FILE = CMakeFiles\TanookiEngine.dir\src\core\tnk_buffer.cpp.obj.d
+  FLAGS = -g -fdiagnostics-color=always -Wall -Wextra -pedantic
+  INCLUDES = -IC:/Users/Microwonk/Dev/VulkanGameEngine/lib/glm -IC:/Users/Microwonk/Dev/VulkanGameEngine/lib/tiny_obj_loader -IC:/Users/Microwonk/Dev/VulkanGameEngine/lib/glfw3/include -isystem C:/VulkanSDK/1.3.261.1/Include
+  OBJECT_DIR = CMakeFiles\TanookiEngine.dir
+  OBJECT_FILE_DIR = CMakeFiles\TanookiEngine.dir\src\core
+
 build CMakeFiles/TanookiEngine.dir/src/core/tnk_camera.cpp.obj: CXX_COMPILER__TanookiEngine_unscanned_Debug C$:/Users/Microwonk/Dev/VulkanGameEngine/src/core/tnk_camera.cpp || cmake_object_order_depends_target_TanookiEngine
   DEP_FILE = CMakeFiles\TanookiEngine.dir\src\core\tnk_camera.cpp.obj.d
   FLAGS = -g -fdiagnostics-color=always -Wall -Wextra -pedantic
@@ -134,7 +141,7 @@ build CMakeFiles/TanookiEngine.dir/src/first_app.cpp.obj: CXX_COMPILER__TanookiE
 #############################################
 # Link the executable bin\TanookiEngine.exe
 
-build bin/TanookiEngine.exe: CXX_EXECUTABLE_LINKER__TanookiEngine_Debug CMakeFiles/TanookiEngine.dir/src/core/main.cpp.obj CMakeFiles/TanookiEngine.dir/src/core/simple_render_system.cpp.obj CMakeFiles/TanookiEngine.dir/src/core/tnk_camera.cpp.obj CMakeFiles/TanookiEngine.dir/src/core/tnk_controller.cpp.obj CMakeFiles/TanookiEngine.dir/src/core/tnk_device.cpp.obj CMakeFiles/TanookiEngine.dir/src/core/tnk_model.cpp.obj CMakeFiles/TanookiEngine.dir/src/core/tnk_pipeline.cpp.obj CMakeFiles/TanookiEngine.dir/src/core/tnk_renderer.cpp.obj CMakeFiles/TanookiEngine.dir/src/core/tnk_swap_chain.cpp.obj CMakeFiles/TanookiEngine.dir/src/core/tnk_window.cpp.obj CMakeFiles/TanookiEngine.dir/src/first_app.cpp.obj | C$:/VulkanSDK/1.3.261.1/Lib/vulkan-1.lib lib/glfw3/src/libglfw3.a || CompileShaders lib/glfw3/src/libglfw3.a
+build bin/TanookiEngine.exe: CXX_EXECUTABLE_LINKER__TanookiEngine_Debug CMakeFiles/TanookiEngine.dir/src/core/main.cpp.obj CMakeFiles/TanookiEngine.dir/src/core/simple_render_system.cpp.obj CMakeFiles/TanookiEngine.dir/src/core/tnk_buffer.cpp.obj CMakeFiles/TanookiEngine.dir/src/core/tnk_camera.cpp.obj CMakeFiles/TanookiEngine.dir/src/core/tnk_controller.cpp.obj CMakeFiles/TanookiEngine.dir/src/core/tnk_device.cpp.obj CMakeFiles/TanookiEngine.dir/src/core/tnk_model.cpp.obj CMakeFiles/TanookiEngine.dir/src/core/tnk_pipeline.cpp.obj CMakeFiles/TanookiEngine.dir/src/core/tnk_renderer.cpp.obj CMakeFiles/TanookiEngine.dir/src/core/tnk_swap_chain.cpp.obj CMakeFiles/TanookiEngine.dir/src/core/tnk_window.cpp.obj CMakeFiles/TanookiEngine.dir/src/first_app.cpp.obj | C$:/VulkanSDK/1.3.261.1/Lib/vulkan-1.lib lib/glfw3/src/libglfw3.a || CompileShaders lib/glfw3/src/libglfw3.a
   FLAGS = -g
   LINK_LIBRARIES = C:/VulkanSDK/1.3.261.1/Lib/vulkan-1.lib  lib/glfw3/src/libglfw3.a  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\TanookiEngine.dir
