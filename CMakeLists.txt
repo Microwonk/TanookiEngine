@@ -12,7 +12,7 @@ include_directories(lib/glm)
 include_directories(lib/tiny_obj_loader)
 
 # Set the Vulkan SDK path
-set(VULKAN_SDK_PATH "C:/VulkanSDK/1.3.261.1")  # Replace with the actual version number
+set(VULKAN_SDK_PATH "C:/VulkanSDK/1.3.268.0")  # Replace with the actual version number
 
 # Find Vulkan
 find_package(Vulkan REQUIRED)
