@@ -99,7 +99,7 @@ namespace tnk {
 
         const float cubeSize = 1.f;
         const float spacing = 10.f;
-        const int cubesPerSide = 10;
+        const int cubesPerSide = 5;
         const float cubeStartPosition = -cubesPerSide * (cubeSize + spacing) / 2.0f;
 
         for (int x = 0; x < cubesPerSide; ++x) {
