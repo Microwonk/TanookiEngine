@@ -1,6 +1,6 @@
 #pragma once
 
-#include "tnk_model.hpp"
+#include "graphics/model.hpp"
 
 
 #include <glm/gtc/matrix_transform.hpp>

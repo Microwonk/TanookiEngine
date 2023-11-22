@@ -5,7 +5,7 @@ set(EngineName "TanookiEngine")
 project(${EngineName})
 
 # Collect all .cpp and .hpp files from the src directory
-file(GLOB_RECURSE SOURCES "src/*.cpp" "src/*.hpp" "src/core/*.cpp" "src/core/*.hpp" "src/*.c" "src/*.h" "src/core/*.c" "src/core/*.h")
+file(GLOB_RECURSE SOURCES "src/*.cpp" "src/*.hpp" "src/**/*.cpp" "src/**/*.hpp")
 
 # Set the include directories
 include_directories(lib/glm)

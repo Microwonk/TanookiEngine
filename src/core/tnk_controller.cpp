@@ -1,6 +1,9 @@
 #include "tnk_controller.hpp"
 
 namespace tnk {
+
+    // TODO quaternions generally use for rotations
+
     void TnkController::moveInPlaneXZ(GLFWwindow *window, float deltaTime, tnk::TnkGameObject &gameObject) {
 
         if (glfwGetKey(window, GLFW_KEY_LEFT_CONTROL) == GLFW_PRESS) moveSpeed = 40.f;

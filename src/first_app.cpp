@@ -7,7 +7,15 @@ namespace tnk {
         glm::vec3 lightDirection = glm::normalize(glm::vec3{1.f, -3.f, -1.f});
     };
 
-    FirstApp::FirstApp() { loadGameObjects(); }
+    FirstApp::FirstApp() {
+
+        // pool with max set of 2 (Max frames in flight), addPoolSize can add any buffer (UNIFORM, STORAGE etc.)
+        globalPool = TnkDescriptorPool::Builder(tnkDevice)
+                .setMaxSets(TnkSwapChain::MAX_FRAMES_IN_FLIGHT)
+                .addPoolSize(VK_DESCRIPTOR_TYPE_UNIFORM_BUFFER, TnkSwapChain::MAX_FRAMES_IN_FLIGHT)
+                .build();
+        loadGameObjects();
+    }
 
     FirstApp::~FirstApp() {}
 
@@ -26,7 +34,19 @@ namespace tnk {
             uboBuffers[i]->map();
         }
 
-        SimpleRenderSystem simpleRenderSystem{tnkDevice, tnkRenderer.getSwapChainRenderPass()};
+        auto globalSetLayout = TnkDescriptorSetLayout::Builder(tnkDevice)
+                .addBinding(0, VK_DESCRIPTOR_TYPE_UNIFORM_BUFFER, VK_SHADER_STAGE_VERTEX_BIT)
+                .build();
+
+        std::vector<VkDescriptorSet> globalDescriptorSets(TnkSwapChain::MAX_FRAMES_IN_FLIGHT);
+        for (int i = 0; i < globalDescriptorSets.size(); ++i) {
+            auto bufferInfo = uboBuffers[i]->descriptorInfo();
+            TnkDescriptorWriter(*globalSetLayout, *globalPool)
+                .writeBuffer(0, &bufferInfo)
+                .build(globalDescriptorSets[i]);
+        }
+
+        SimpleRenderSystem simpleRenderSystem{tnkDevice, tnkRenderer.getSwapChainRenderPass(), globalSetLayout->getDescriptorSetLayout()};
         TnkCamera camera{};
         camera.setViewTarget(glm::vec3(-1.f, -2.f, 10.f), glm::vec3(0.f, 0.f, 2.5f));
 
@@ -64,6 +84,7 @@ namespace tnk {
                     frameTime,
                     commandBuffer,
                     camera,
+                    globalDescriptorSets[frameIndex]
                 };
 
                 // update
@@ -99,7 +120,7 @@ namespace tnk {
 
         const float cubeSize = 1.f;
         const float spacing = 10.f;
-        const int cubesPerSide = 5;
+        const int cubesPerSide = 20;
         const float cubeStartPosition = -cubesPerSide * (cubeSize + spacing) / 2.0f;
 
         for (int x = 0; x < cubesPerSide; ++x) {
@@ -108,9 +129,9 @@ namespace tnk {
                     auto cube = TnkGameObject::createGameObject();
                     cube.model = model;
                     cube.transform.translation = {
-                            cubeStartPosition + x * (cubeSize + spacing),
-                            cubeStartPosition + y * (cubeSize + spacing),
-                            cubeStartPosition + z * (cubeSize + spacing)
+                            cubeStartPosition + x * (cubeSize + spacing) + rand() / 100,
+                            cubeStartPosition + y * (cubeSize + spacing) + rand() / 100,
+                            cubeStartPosition + z * (cubeSize + spacing) + rand() / 100,
                     };
                     cube.transform.scale = glm::vec3{cubeSize};
                     gameObjects.push_back(std::move(cube));
