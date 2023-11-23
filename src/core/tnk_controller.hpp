@@ -1,6 +1,6 @@
 #pragma once
 
-#include "tnk_game_object.hpp"
+#include "graphics/camera.hpp"
 #include "tnk_window.hpp"
 
 namespace tnk {
@@ -16,11 +16,10 @@ namespace tnk {
             int close = GLFW_KEY_ESCAPE;
         };
 
-        void moveInPlaneXZ(GLFWwindow* window, float deltaTime, TnkGameObject& gameObject);
+        void moveInPlaneXZ(GLFWwindow* window, float deltaTime, TnkCamera& camera);
 
         KeyMappings keys{};
-        float moveSpeed{8.f};
-        float lookSpeed{8.f};
+        float moveSpeed{};
         float lastMouseX{0.f};
         float lastMouseY{0.f};
     };

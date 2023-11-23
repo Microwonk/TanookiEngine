@@ -4,62 +4,53 @@ namespace tnk {
 
     // TODO quaternions generally use for rotations
 
-    void TnkController::moveInPlaneXZ(GLFWwindow *window, float deltaTime, tnk::TnkGameObject &gameObject) {
+    void TnkController::moveInPlaneXZ(GLFWwindow *window, float deltaTime, TnkCamera &camera) {
 
         if (glfwGetKey(window, GLFW_KEY_LEFT_CONTROL) == GLFW_PRESS) moveSpeed = 40.f;
         else moveSpeed = 20.f;
 
-
         if (glfwGetKey(window, keys.close) == GLFW_PRESS) glfwSetWindowShouldClose(window, true);
-
-        glm::vec3 rotate{0};
 
         // Handle mouse movement
         double mouseX, mouseY;
         glfwGetCursorPos(window, &mouseX, &mouseY);
-
         // Calculate the change in mouse position
         double deltaX = mouseX - lastMouseX;
         double deltaY = mouseY - lastMouseY;
-
         // Update the last mouse position for the next frame
         lastMouseX = mouseX;
         lastMouseY = mouseY;
 
-        // Adjust the camera orientation based on mouse movement
-        const float sensitivity = 0.1f;
-        deltaX *= sensitivity;
-        deltaY *= sensitivity;
+        // calculate the difference between last mouse pos and current mouse pos
+        // and multiply it by delta time for consistent speed
+        glm::vec3 rotate{0};
+        // might be confusing because the x and y are flipped, but that is because the vector is in order of pitch, yaw, roll.
+        rotate.x += static_cast<float>(deltaY);
+        rotate.y -= static_cast<float>(deltaX);
+        rotate *= deltaTime;
+        // rotate of z should always be 0. no roll needed for this camera
 
-        rotate.y += static_cast<float>(deltaX);
-        rotate.x -= static_cast<float>(deltaY);
+        camera.transform.addRotation(rotate);
 
-        if (glm::dot(rotate, rotate) > std::numeric_limits<float>::epsilon()) {
-            gameObject.transform.rotation += lookSpeed * deltaTime * glm::normalize(rotate);
-        }
+        auto eye = camera.eye();
 
-        gameObject.transform.rotation.x = glm::clamp(gameObject.transform.rotation.x, -1.5f, 1.5f);
-        gameObject.transform.rotation.y = glm::mod(gameObject.transform.rotation.y, glm::two_pi<float>());
-
-        float yaw = gameObject.transform.rotation.y;
-        const glm::vec3 forwardDirection{sin(yaw), 0.f, cos(yaw)};
-        const glm::vec3 rightDirection{forwardDirection.z, 0.f, -forwardDirection.x};
-        const glm::vec3 upDirection{0.f, 1.f, 0.f};
+        const glm::vec3 forwardDir{eye.x, 0.0, eye.z};
+        const glm::vec3 rightDir{forwardDir.z, 0.f, -forwardDir.x};
+        const glm::vec3 upDir{0.f, 1.f, 0.f};
 
         glm::vec3 moveDirection{0.f};
+        if (glfwGetKey(window, keys.moveForward) == GLFW_PRESS) moveDirection += forwardDir;
+        if (glfwGetKey(window, keys.moveBackward) == GLFW_PRESS) moveDirection -= forwardDir;
 
-        if (glfwGetKey(window, keys.moveForward) == GLFW_PRESS) moveDirection += forwardDirection;
-        if (glfwGetKey(window, keys.moveBackward) == GLFW_PRESS) moveDirection -= forwardDirection;
+        if (glfwGetKey(window, keys.moveRight) == GLFW_PRESS) moveDirection += rightDir;
+        if (glfwGetKey(window, keys.moveLeft) == GLFW_PRESS) moveDirection -= rightDir;
 
-        if (glfwGetKey(window, keys.moveRight) == GLFW_PRESS) moveDirection += rightDirection;
-        if (glfwGetKey(window, keys.moveLeft) == GLFW_PRESS) moveDirection -= rightDirection;
-
-        if (glfwGetKey(window, keys.moveUp) == GLFW_PRESS) moveDirection -= upDirection;
-        if (glfwGetKey(window, keys.moveDown) == GLFW_PRESS) moveDirection += upDirection;
+        if (glfwGetKey(window, keys.moveUp) == GLFW_PRESS) moveDirection -= upDir;
+        if (glfwGetKey(window, keys.moveDown) == GLFW_PRESS) moveDirection += upDir;
 
         // the vectors must not be 0, this is how we check
         if (glm::dot(moveDirection, moveDirection) > std::numeric_limits<float>::epsilon()){
-            gameObject.transform.translation += moveSpeed * deltaTime * glm::normalize(moveDirection);
+            camera.transform.translation += moveSpeed * deltaTime * glm::normalize(moveDirection);
         }
 
     }

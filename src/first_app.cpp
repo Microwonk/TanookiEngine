@@ -48,7 +48,6 @@ namespace tnk {
 
         SimpleRenderSystem simpleRenderSystem{tnkDevice, tnkRenderer.getSwapChainRenderPass(), globalSetLayout->getDescriptorSetLayout()};
         TnkCamera camera{};
-        camera.setViewTarget(glm::vec3(-1.f, -2.f, 10.f), glm::vec3(0.f, 0.f, 2.5f));
 
         auto viewerObject = TnkGameObject::createGameObject();
         TnkController cameraController{};
@@ -61,20 +60,19 @@ namespace tnk {
         glfwSetInputMode(tnkWindow.getGLFWwindow(), GLFW_CURSOR, GLFW_CURSOR_DISABLED);
         tnkRenderer.setClearColor(glm::vec3(0.1f, 0.1f, 0.1f));
 
+
         while (!tnkWindow.shouldClose()) {
             glfwPollEvents();
 
-            // Calculate frame time
             auto currentTime = std::chrono::high_resolution_clock::now();
             auto frameTime = std::chrono::duration<float>(currentTime - lastTime).count();
             lastTime = currentTime;
 
             // Update camera and other logic
-            cameraController.moveInPlaneXZ(tnkWindow.getGLFWwindow(), frameTime, viewerObject);
-            camera.setViewYXZ(viewerObject.transform.translation, viewerObject.transform.rotation);
+            cameraController.moveInPlaneXZ(tnkWindow.getGLFWwindow(), frameTime, camera);
 
             float aspect = tnkRenderer.getAspectRatio();
-            camera.setPerspectiveProjection(glm::radians(70.f), aspect, 0.1f, 1000.f);
+            camera.setPerspectiveProjection(glm::radians(60.f), aspect, 0.1f, 1000.f);
 
             // Render the frame
             if (auto commandBuffer = tnkRenderer.beginFrame()) {
@@ -120,7 +118,7 @@ namespace tnk {
 
         const float cubeSize = 1.f;
         const float spacing = 10.f;
-        const int cubesPerSide = 20;
+        const int cubesPerSide = 1;
         const float cubeStartPosition = -cubesPerSide * (cubeSize + spacing) / 2.0f;
 
         for (int x = 0; x < cubesPerSide; ++x) {
@@ -129,9 +127,9 @@ namespace tnk {
                     auto cube = TnkGameObject::createGameObject();
                     cube.model = model;
                     cube.transform.translation = {
-                            cubeStartPosition + x * (cubeSize + spacing) + rand() / 100,
-                            cubeStartPosition + y * (cubeSize + spacing) + rand() / 100,
-                            cubeStartPosition + z * (cubeSize + spacing) + rand() / 100,
+                            cubeStartPosition + x * (cubeSize + spacing),
+                            cubeStartPosition + y * (cubeSize + spacing),
+                            cubeStartPosition + z * (cubeSize + spacing),
                     };
                     cube.transform.scale = glm::vec3{cubeSize};
                     gameObjects.push_back(std::move(cube));

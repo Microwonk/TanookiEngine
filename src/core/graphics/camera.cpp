@@ -2,6 +2,7 @@
 
 namespace tnk {
     void TnkCamera::setOrthoProjection(float left, float right, float top, float bottom, float near, float far) {
+        // is just some setup maths that has to be done this way for the projection to work like this
         projectionMatrix = glm::mat4{1.0f};
         projectionMatrix[0][0] = 2.f / (right - left);
         projectionMatrix[1][1] = 2.f / (bottom - top);
@@ -13,6 +14,7 @@ namespace tnk {
 
     void TnkCamera::setPerspectiveProjection(float fov, float aspect, float near, float far) {
         assert(glm::abs(aspect - std::numeric_limits<float>::epsilon()) > 0.0f);
+        // is just some setup maths that has to be done this way for the projection to work like this
         const float tanHalfFov = tan(fov / 2.f);
         projectionMatrix = glm::mat4{0.0f};
         projectionMatrix[0][0] = 1.f / (aspect * tanHalfFov);
@@ -22,54 +24,25 @@ namespace tnk {
         projectionMatrix[3][2] = -(far * near) / (far - near);
     }
 
-    void TnkCamera::setViewDirection(glm::vec3 position, glm::vec3 direction, glm::vec3 up) {
-        assert(direction != glm::vec3{0.f} && "Direction may no be zero.");
+    glm::mat4& TnkCamera::getViewMatrix() {
+        // first normalize the quaternion to get unit length
+        transform.orientation = glm::normalize(transform.orientation);
+        // cast the quaternion to a 4x4 matrix to set viewMatrix
+        glm::mat4 rotate = glm::mat4_cast(transform.orientation);
 
-        const glm::vec3 w{glm::normalize(direction)};
-        const glm::vec3 u{glm::normalize(glm::cross(w, up))};
-        const glm::vec3 v{glm::cross(w, u)};
+        // real translation is the 4x4 identity matrix - the vec3 of the translation x y z components
+        glm::mat4 translate = glm::mat4(1.0f);
+        translate = glm::translate(translate, -transform.translation);
 
-        viewMatrix = glm::mat4{1.f};
-        viewMatrix[0][0] = u.x;
-        viewMatrix[1][0] = u.y;
-        viewMatrix[2][0] = u.z;
-        viewMatrix[0][1] = v.x;
-        viewMatrix[1][1] = v.y;
-        viewMatrix[2][1] = v.z;
-        viewMatrix[0][2] = w.x;
-        viewMatrix[1][2] = w.y;
-        viewMatrix[2][2] = w.z;
-        viewMatrix[3][0] = -glm::dot(u, position);
-        viewMatrix[3][1] = -glm::dot(v, position);
-        viewMatrix[3][2] = -glm::dot(w, position);
+        // the viewMatrix is computed by multiplying the rotation and the translation matrices in this order (non-commutative)
+        viewMatrix = rotate * translate;
+        return viewMatrix;
     }
 
-    void TnkCamera::setViewTarget(glm::vec3 position, glm::vec3 target, glm::vec3 up) {
-        setViewDirection(position, target - position, up);
-    }
-
-    void TnkCamera::setViewYXZ(glm::vec3 position, glm::vec3 rotation) {
-        const float c3 = glm::cos(rotation.z);
-        const float s3 = glm::sin(rotation.z);
-        const float c2 = glm::cos(rotation.x);
-        const float s2 = glm::sin(rotation.x);
-        const float c1 = glm::cos(rotation.y);
-        const float s1 = glm::sin(rotation.y);
-        const glm::vec3 u{(c1 * c3 + s1 * s2 * s3), (c2 * s3), (c1 * s2 * s3 - c3 * s1)};
-        const glm::vec3 v{(c3 * s1 * s2 - c1 * s3), (c2 * c3), (c1 * c3 * s2 + s1 * s3)};
-        const glm::vec3 w{(c2 * s1), (-s2), (c1 * c2)};
-        viewMatrix = glm::mat4{1.f};
-        viewMatrix[0][0] = u.x;
-        viewMatrix[1][0] = u.y;
-        viewMatrix[2][0] = u.z;
-        viewMatrix[0][1] = v.x;
-        viewMatrix[1][1] = v.y;
-        viewMatrix[2][1] = v.z;
-        viewMatrix[0][2] = w.x;
-        viewMatrix[1][2] = w.y;
-        viewMatrix[2][2] = w.z;
-        viewMatrix[3][0] = -glm::dot(u, position);
-        viewMatrix[3][1] = -glm::dot(v, position);
-        viewMatrix[3][2] = -glm::dot(w, position);
+    // TODO look into why i need a -eyeMat.x ??
+    glm::vec3 TnkCamera::eye() {
+        // the direction vector the camera is looking at (the eye)                            this vector is for going along the z-axis
+        auto eyeMat = glm::mat3(glm::mat4_cast(transform.orientation)) * glm::vec3{0, 0, 1.0f};
+        return glm::vec3{-eyeMat.x, -eyeMat.y, eyeMat.z};
     }
 }
