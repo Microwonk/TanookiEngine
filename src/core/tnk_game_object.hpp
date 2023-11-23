@@ -10,7 +10,7 @@
 namespace tnk {
 
     struct TransformComponent {
-        glm::vec3 translation{}; // position offset
+        glm::vec3 translation{};
         glm::vec3 scale{1.f, 1.f, 1.f};
         glm::quat orientation{};
 
@@ -32,17 +32,12 @@ namespace tnk {
             glm::quat qPitch = glm::angleAxis(pitch, glm::vec3{1, 0, 0});
             glm::quat qYaw = glm::angleAxis(yaw, glm::vec3{0, 1, 0});
             glm::quat qRoll = glm::angleAxis(roll,glm::vec3{0,0,1});
-
             // Combine qPitch and qYaw in a single step
             orientation = glm::normalize(qPitch * orientation * qYaw * qRoll);
         }
 
-        void addRotation(const float pitch, const float yaw) {
-            glm::quat qPitch = glm::angleAxis(pitch, glm::vec3{1, 0, 0});
-            glm::quat qYaw = glm::angleAxis(yaw, glm::vec3{0, 1, 0});
-
-            // VERY IMPORTANT TO MULTIPLY : pitch, then orientation, then yaw!
-            orientation = glm::normalize(qPitch * orientation * qYaw);
+        void addRotation(glm::vec3 pitchYawRoll) {
+            addRotation(pitchYawRoll.x, pitchYawRoll.y, pitchYawRoll.z);
         }
     };
 

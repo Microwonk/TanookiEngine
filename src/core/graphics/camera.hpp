@@ -19,6 +19,7 @@ namespace tnk {
 
         const glm::mat4& getProjectionMatrix() const { return projectionMatrix; }
         glm::mat4& getViewMatrix();
+        glm::vec3 eye();
 
         TransformComponent transform{};
 

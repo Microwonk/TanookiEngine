@@ -2,6 +2,7 @@
 
 namespace tnk {
     void TnkCamera::setOrthoProjection(float left, float right, float top, float bottom, float near, float far) {
+        // is just some setup maths that has to be done this way for the projection to work like this
         projectionMatrix = glm::mat4{1.0f};
         projectionMatrix[0][0] = 2.f / (right - left);
         projectionMatrix[1][1] = 2.f / (bottom - top);
@@ -13,6 +14,7 @@ namespace tnk {
 
     void TnkCamera::setPerspectiveProjection(float fov, float aspect, float near, float far) {
         assert(glm::abs(aspect - std::numeric_limits<float>::epsilon()) > 0.0f);
+        // is just some setup maths that has to be done this way for the projection to work like this
         const float tanHalfFov = tan(fov / 2.f);
         projectionMatrix = glm::mat4{0.0f};
         projectionMatrix[0][0] = 1.f / (aspect * tanHalfFov);
@@ -23,13 +25,24 @@ namespace tnk {
     }
 
     glm::mat4& TnkCamera::getViewMatrix() {
+        // first normalize the quaternion to get unit length
         transform.orientation = glm::normalize(transform.orientation);
+        // cast the quaternion to a 4x4 matrix to set viewMatrix
         glm::mat4 rotate = glm::mat4_cast(transform.orientation);
 
+        // real translation is the 4x4 identity matrix - the vec3 of the translation x y z components
         glm::mat4 translate = glm::mat4(1.0f);
         translate = glm::translate(translate, -transform.translation);
 
+        // the viewMatrix is computed by multiplying the rotation and the translation matrices in this order (non-commutative)
         viewMatrix = rotate * translate;
         return viewMatrix;
+    }
+
+    // TODO look into why i need a -eyeMat.x ??
+    glm::vec3 TnkCamera::eye() {
+        // the direction vector the camera is looking at (the eye)                            this vector is for going along the z-axis
+        auto eyeMat = glm::mat3(glm::mat4_cast(transform.orientation)) * glm::vec3{0, 0, 1.0f};
+        return glm::vec3{-eyeMat.x, -eyeMat.y, eyeMat.z};
     }
 }

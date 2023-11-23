@@ -60,12 +60,10 @@ namespace tnk {
         glfwSetInputMode(tnkWindow.getGLFWwindow(), GLFW_CURSOR, GLFW_CURSOR_DISABLED);
         tnkRenderer.setClearColor(glm::vec3(0.1f, 0.1f, 0.1f));
 
-        float rot = 0.001f;
 
         while (!tnkWindow.shouldClose()) {
             glfwPollEvents();
 
-            // Calculate frame time
             auto currentTime = std::chrono::high_resolution_clock::now();
             auto frameTime = std::chrono::duration<float>(currentTime - lastTime).count();
             lastTime = currentTime;
@@ -75,10 +73,6 @@ namespace tnk {
 
             float aspect = tnkRenderer.getAspectRatio();
             camera.setPerspectiveProjection(glm::radians(60.f), aspect, 0.1f, 1000.f);
-
-            for (auto& obj : gameObjects) {
-                obj.transform.addRotation(rot, rot, rot);
-            }
 
             // Render the frame
             if (auto commandBuffer = tnkRenderer.beginFrame()) {
@@ -124,7 +118,7 @@ namespace tnk {
 
         const float cubeSize = 1.f;
         const float spacing = 10.f;
-        const int cubesPerSide = 20;
+        const int cubesPerSide = 1;
         const float cubeStartPosition = -cubesPerSide * (cubeSize + spacing) / 2.0f;
 
         for (int x = 0; x < cubesPerSide; ++x) {
@@ -133,9 +127,9 @@ namespace tnk {
                     auto cube = TnkGameObject::createGameObject();
                     cube.model = model;
                     cube.transform.translation = {
-                            cubeStartPosition + x * (cubeSize + spacing) + rand() / 100,
-                            cubeStartPosition + y * (cubeSize + spacing) + rand() / 100,
-                            cubeStartPosition + z * (cubeSize + spacing) + rand() / 100,
+                            cubeStartPosition + x * (cubeSize + spacing),
+                            cubeStartPosition + y * (cubeSize + spacing),
+                            cubeStartPosition + z * (cubeSize + spacing),
                     };
                     cube.transform.scale = glm::vec3{cubeSize};
                     gameObjects.push_back(std::move(cube));
