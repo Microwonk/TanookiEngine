@@ -48,7 +48,6 @@ namespace tnk {
 
         SimpleRenderSystem simpleRenderSystem{tnkDevice, tnkRenderer.getSwapChainRenderPass(), globalSetLayout->getDescriptorSetLayout()};
         TnkCamera camera{};
-        camera.setViewTarget(glm::vec3(-1.f, -2.f, 10.f), glm::vec3(0.f, 0.f, 2.5f));
 
         auto viewerObject = TnkGameObject::createGameObject();
         TnkController cameraController{};
@@ -61,6 +60,8 @@ namespace tnk {
         glfwSetInputMode(tnkWindow.getGLFWwindow(), GLFW_CURSOR, GLFW_CURSOR_DISABLED);
         tnkRenderer.setClearColor(glm::vec3(0.1f, 0.1f, 0.1f));
 
+        float rot = 0.001f;
+
         while (!tnkWindow.shouldClose()) {
             glfwPollEvents();
 
@@ -70,11 +71,14 @@ namespace tnk {
             lastTime = currentTime;
 
             // Update camera and other logic
-            cameraController.moveInPlaneXZ(tnkWindow.getGLFWwindow(), frameTime, viewerObject);
-            camera.setViewYXZ(viewerObject.transform.translation, viewerObject.transform.rotation);
+            cameraController.moveInPlaneXZ(tnkWindow.getGLFWwindow(), frameTime, camera);
 
             float aspect = tnkRenderer.getAspectRatio();
-            camera.setPerspectiveProjection(glm::radians(70.f), aspect, 0.1f, 1000.f);
+            camera.setPerspectiveProjection(glm::radians(60.f), aspect, 0.1f, 1000.f);
+
+            for (auto& obj : gameObjects) {
+                obj.transform.addRotation(rot, rot, rot);
+            }
 
             // Render the frame
             if (auto commandBuffer = tnkRenderer.beginFrame()) {

@@ -12,66 +12,38 @@ namespace tnk {
     struct TransformComponent {
         glm::vec3 translation{}; // position offset
         glm::vec3 scale{1.f, 1.f, 1.f};
-//        glm::quat rotation{};
-        glm::vec3 rotation{};
+        glm::quat orientation{};
 
         glm::mat4 mat4() {
-            const float c3 = glm::cos(rotation.z);
-            const float s3 = glm::sin(rotation.z);
-            const float c2 = glm::cos(rotation.x);
-            const float s2 = glm::sin(rotation.x);
-            const float c1 = glm::cos(rotation.y);
-            const float s1 = glm::sin(rotation.y);
-            return glm::mat4{{scale.x * (c1 * c3 + s1 * s2 * s3),
-                              scale.x * (c2 * s3),
-                              scale.x * (c1 * s2 * s3 - c3 * s1),
-                              0.0f},
-                             {scale.y * (c3 * s1 * s2 - c1 * s3),
-                              scale.y * (c2 * c3),
-                              scale.y * (c1 * c3 * s2 + s1 * s3),
-                              0.0f},
-                              {scale.z * (c2 * s1),
-                               scale.z * (-s2),
-                               scale.z * (c1 * c2),
-                               0.0f},
-                               {translation.x, translation.y, translation.z, 1.0f}};
+            // Convert translation to a mat4
+            glm::mat4 translationMat = glm::translate(glm::mat4(1.0f), translation);
+            return translationMat * glm::mat4_cast(orientation);
         }
 
         glm::mat3 normalMatrix() {
-            const float c3 = glm::cos(rotation.z);
-            const float s3 = glm::sin(rotation.z);
-            const float c2 = glm::cos(rotation.x);
-            const float s2 = glm::sin(rotation.x);
-            const float c1 = glm::cos(rotation.y);
-            const float s1 = glm::sin(rotation.y);
-            const glm::vec3 invScale = 1.0f / scale;
-            return glm::mat3{
-                {
-                    invScale.x * (c1 * c3 + s1 * s2 * s3),
-                    invScale.x * (c2 * s3),
-                    invScale.x * (c1 * s2 * s3 - c3 * s1),
-                },
-                {
-                    invScale.y * (c3 * s1 * s2 - c1 * s3),
-                    invScale.y * (c2 * c3),
-                    invScale.y * (c1 * c3 * s2 + s1 * s3),
-                },
-                {
-                    invScale.z * (c2 * s1),
-                    invScale.z * (-s2),
-                    invScale.z * (c1 * c2),
-                },
-            };
+            const glm::mat3 rotationMat = glm::mat3_cast(orientation);
+            const glm::mat3 invScaleMat = glm::mat3(1.0f / scale.x, 0.0f, 0.0f,
+                                                    0.0f, 1.0f / scale.y, 0.0f,
+                                                    0.0f, 0.0f, 1.0f / scale.z);
+            return glm::transpose(glm::inverse(rotationMat * invScaleMat));
         }
 
-        // TODO later quats
-//        void setRotation(const glm::vec3& eulerAngles) {
-//            rotation = glm::quat(eulerAngles);
-//        }
-//
-//        void setRotation(const glm::quat& quat) {
-//            rotation = quat;
-//        }
+        void addRotation(const float pitch, const float yaw, const float roll) {
+            glm::quat qPitch = glm::angleAxis(pitch, glm::vec3{1, 0, 0});
+            glm::quat qYaw = glm::angleAxis(yaw, glm::vec3{0, 1, 0});
+            glm::quat qRoll = glm::angleAxis(roll,glm::vec3{0,0,1});
+
+            // Combine qPitch and qYaw in a single step
+            orientation = glm::normalize(qPitch * orientation * qYaw * qRoll);
+        }
+
+        void addRotation(const float pitch, const float yaw) {
+            glm::quat qPitch = glm::angleAxis(pitch, glm::vec3{1, 0, 0});
+            glm::quat qYaw = glm::angleAxis(yaw, glm::vec3{0, 1, 0});
+
+            // VERY IMPORTANT TO MULTIPLY : pitch, then orientation, then yaw!
+            orientation = glm::normalize(qPitch * orientation * qYaw);
+        }
     };
 
     class TnkGameObject {
