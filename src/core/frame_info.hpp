@@ -1,6 +1,7 @@
 #pragma once
 
-#include "camera.hpp"
+#include "graphics/camera.hpp"
+#include "tnk_game_object.hpp"
 
 #include <vulkan/vulkan.h>
 
@@ -11,5 +12,6 @@ namespace tnk {
         VkCommandBuffer commandBuffer;
         TnkCamera &camera;
         VkDescriptorSet globalDescriptorSet;
+        TnkGameObject::Map &gameObjects;
     };
 }

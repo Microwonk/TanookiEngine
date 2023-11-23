@@ -6,8 +6,8 @@ namespace tnk {
 
     void TnkController::moveInPlaneXZ(GLFWwindow *window, float deltaTime, TnkCamera &camera) {
 
-        if (glfwGetKey(window, GLFW_KEY_LEFT_CONTROL) == GLFW_PRESS) moveSpeed = 40.f;
-        else moveSpeed = 20.f;
+        if (glfwGetKey(window, GLFW_KEY_LEFT_CONTROL) == GLFW_PRESS) moveSpeed = 6.f;
+        else moveSpeed = 3.f;
 
         if (glfwGetKey(window, keys.close) == GLFW_PRESS) glfwSetWindowShouldClose(window, true);
 
@@ -34,8 +34,8 @@ namespace tnk {
 
         auto eye = camera.eye();
 
-        const glm::vec3 forwardDir{eye.x, 0.0, eye.z};
-        const glm::vec3 rightDir{forwardDir.z, 0.f, -forwardDir.x};
+        const glm::vec3 forwardDir{eye.x, 0, eye.z}; // putting eye.y in here will make it possible to move in the y plane without shift and space
+        const glm::vec3 rightDir{eye.z, 0, -eye.x};
         const glm::vec3 upDir{0.f, 1.f, 0.f};
 
         glm::vec3 moveDirection{0.f};

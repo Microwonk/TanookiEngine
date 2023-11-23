@@ -4,7 +4,9 @@ namespace tnk {
 
     struct GlobalUbo {
         glm::mat4 projectionView{1.f};
-        glm::vec3 lightDirection = glm::normalize(glm::vec3{1.f, -3.f, -1.f});
+        glm::vec4 ambientColor{1.f, 1.f, 1.f, .02f}; // w is intensity
+        glm::vec3 lightPosition{-1.f};
+        alignas(16) glm::vec4 lightColor{0.5f, 0.5f, 1.f, 1.f}; // w is light intensity
     };
 
     FirstApp::FirstApp() {
@@ -35,7 +37,7 @@ namespace tnk {
         }
 
         auto globalSetLayout = TnkDescriptorSetLayout::Builder(tnkDevice)
-                .addBinding(0, VK_DESCRIPTOR_TYPE_UNIFORM_BUFFER, VK_SHADER_STAGE_VERTEX_BIT)
+                .addBinding(0, VK_DESCRIPTOR_TYPE_UNIFORM_BUFFER, VK_SHADER_STAGE_ALL_GRAPHICS) // either ALL_GRAPHICS or VERTEX | FRAGMENT
                 .build();
 
         std::vector<VkDescriptorSet> globalDescriptorSets(TnkSwapChain::MAX_FRAMES_IN_FLIGHT);
@@ -48,8 +50,8 @@ namespace tnk {
 
         SimpleRenderSystem simpleRenderSystem{tnkDevice, tnkRenderer.getSwapChainRenderPass(), globalSetLayout->getDescriptorSetLayout()};
         TnkCamera camera{};
+        camera.transform.translation.z = -3.0f;
 
-        auto viewerObject = TnkGameObject::createGameObject();
         TnkController cameraController{};
 
         auto startTime = std::chrono::high_resolution_clock::now();
@@ -82,7 +84,8 @@ namespace tnk {
                     frameTime,
                     commandBuffer,
                     camera,
-                    globalDescriptorSets[frameIndex]
+                    globalDescriptorSets[frameIndex],
+                    gameObjects
                 };
 
                 // update
@@ -93,7 +96,7 @@ namespace tnk {
 
                 // render
                 tnkRenderer.beginSwapChainRenderPass(commandBuffer);
-                simpleRenderSystem.renderGameObjects(frameInfo, gameObjects);
+                simpleRenderSystem.renderGameObjects(frameInfo);
                 tnkRenderer.endSwapChainRenderPass(commandBuffer);
                 tnkRenderer.endFrame();
             }
@@ -114,28 +117,21 @@ namespace tnk {
     }
 
     void FirstApp::loadGameObjects() {
-        std::shared_ptr<TnkModel> model = TnkModel::createModelFromFile(tnkDevice, "models/colored_cube.obj");
+        std::shared_ptr<TnkModel> model = TnkModel::createModelFromFile(tnkDevice, "models/smooth_vase.obj");
 
-        const float cubeSize = 1.f;
-        const float spacing = 10.f;
-        const int cubesPerSide = 1;
-        const float cubeStartPosition = -cubesPerSide * (cubeSize + spacing) / 2.0f;
+        auto vase = TnkGameObject::createGameObject();
+        vase.model = model;
+        vase.transform.translation = glm::vec3{.5f, .5f, 0};
+        vase.transform.scale = glm::vec3{3.f, 1.5f, 3.f};
+        gameObjects.emplace(vase.getId(), std::move(vase));
 
-        for (int x = 0; x < cubesPerSide; ++x) {
-            for (int y = 0; y < cubesPerSide; ++y) {
-                for (int z = 0; z < cubesPerSide; ++z) {
-                    auto cube = TnkGameObject::createGameObject();
-                    cube.model = model;
-                    cube.transform.translation = {
-                            cubeStartPosition + x * (cubeSize + spacing),
-                            cubeStartPosition + y * (cubeSize + spacing),
-                            cubeStartPosition + z * (cubeSize + spacing),
-                    };
-                    cube.transform.scale = glm::vec3{cubeSize};
-                    gameObjects.push_back(std::move(cube));
-                }
-            }
-        }
+        model = TnkModel::createModelFromFile(tnkDevice, "models/quad.obj");
+
+        auto floor = TnkGameObject::createGameObject();
+        floor.model = model;
+        floor.transform.translation = glm::vec3{0, .5f, 0};
+        floor.transform.scale = glm::vec3{3.f};
+        gameObjects.emplace(floor.getId(), std::move(floor));
     }
 
     float FirstApp::fps() { return tnkFps; }

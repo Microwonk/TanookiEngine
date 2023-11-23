@@ -1,7 +1,7 @@
 #pragma once
 
 #include "graphics/model.hpp"
-
+#include <unordered_map>
 
 #include <glm/gtc/matrix_transform.hpp>
 #include <glm/gtc/quaternion.hpp>
@@ -15,9 +15,10 @@ namespace tnk {
         glm::quat orientation{};
 
         glm::mat4 mat4() {
-            // Convert translation to a mat4
+            // Convert translation and scale to a mat4
             glm::mat4 translationMat = glm::translate(glm::mat4(1.0f), translation);
-            return translationMat * glm::mat4_cast(orientation);
+            glm::mat4 scaleMat = glm::scale(glm::mat4(1.0f), scale);
+            return translationMat * scaleMat * glm::mat4_cast(orientation);
         }
 
         glm::mat3 normalMatrix() {
@@ -41,9 +42,12 @@ namespace tnk {
         }
     };
 
+    // TODO implement ECS with
+    // https://austinmorlan.com/posts/entity_component_system/
     class TnkGameObject {
     public:
         using id_t = unsigned int;
+        using Map = std::unordered_map<id_t, TnkGameObject>;
 
         static TnkGameObject createGameObject() {
             static id_t currentId = 0;

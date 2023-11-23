@@ -42,7 +42,7 @@ namespace tnk {
     // TODO look into why i need a -eyeMat.x ??
     glm::vec3 TnkCamera::eye() {
         // the direction vector the camera is looking at (the eye)                            this vector is for going along the z-axis
-        auto eyeMat = glm::mat3(glm::mat4_cast(transform.orientation)) * glm::vec3{0, 0, 1.0f};
-        return glm::vec3{-eyeMat.x, -eyeMat.y, eyeMat.z};
+        auto eyeVec = glm::mat3(glm::mat4_cast(transform.orientation)) * glm::vec3{0, 0, 1.0f};
+        return glm::vec3{-eyeVec.x, -eyeVec.y, eyeVec.z};
     }
 }

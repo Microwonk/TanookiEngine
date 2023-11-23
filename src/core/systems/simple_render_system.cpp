@@ -50,7 +50,7 @@ namespace tnk {
                 "simple_shader.frag.spv");
     }
 
-    void SimpleRenderSystem::renderGameObjects(FrameInfo &frameInfo, std::vector<TnkGameObject> &gameObjects) {
+    void SimpleRenderSystem::renderGameObjects(FrameInfo &frameInfo) {
         tnkPipeline->bind(frameInfo.commandBuffer);
 
         // only need to bind once, then can be used by every game object
@@ -61,7 +61,8 @@ namespace tnk {
                                 &frameInfo.globalDescriptorSet,
                                 0, nullptr);
 
-        for (auto& obj: gameObjects) {
+        for (auto& kv: frameInfo.gameObjects) {
+            auto& obj = kv.second;
             SimplePushConstantData push{};
             push.modelMatrix = obj.transform.mat4();
             push.normalMatrix = obj.transform.normalMatrix();

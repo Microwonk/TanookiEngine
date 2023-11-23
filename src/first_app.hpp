@@ -46,6 +46,6 @@ namespace tnk
 
         // order of declaration matters (pool needs to be destroyed before the devices) i.e. the deref works from bottom to top
         std::unique_ptr<TnkDescriptorPool> globalPool{};
-        std::vector<TnkGameObject> gameObjects;
+        TnkGameObject::Map gameObjects;
 	};
 }
