@@ -5,7 +5,7 @@
 #include "../graphics/model.hpp"
 #include "../tnk_game_object.hpp"
 #include "../graphics/camera.hpp"
-#include "../frame_info.hpp"
+#include "../graphics/frame_info.hpp"
 
 #define GLM_FORCE_RADIANS
 #define GLM_FORCE_DEPTH_ZERO_TO_ONE // openGL uses -1 to 0, this uses 0 to 1

@@ -6,6 +6,7 @@
 #include "core/graphics/model.hpp"
 #include "core/tnk_game_object.hpp"
 #include "core/systems/simple_render_system.hpp"
+#include "core/systems/point_light_system.hpp"
 #include "core/graphics/camera.hpp"
 #include "core/tnk_controller.hpp"
 #include "core/graphics/descriptors.hpp"

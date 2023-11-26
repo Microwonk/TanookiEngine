@@ -1,6 +1,6 @@
 #pragma once
 
-#include "../tnk_game_object.hpp"
+#include "../transform_component.hpp"
 
 #define GLM_FORCE_RADIANS
 #define GLM_FORCE_DEPTH_ZERO_TO_ONE // openGL uses -1 to 0, this uses 0 to 1

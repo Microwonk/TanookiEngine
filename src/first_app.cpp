@@ -3,7 +3,8 @@
 namespace tnk {
 
     struct GlobalUbo {
-        glm::mat4 projectionView{1.f};
+        glm::mat4 projection{1.f};
+        glm::mat4 view{1.f};
         glm::vec4 ambientColor{1.f, 1.f, 1.f, .02f}; // w is intensity
         glm::vec3 lightPosition{-1.f};
         alignas(16) glm::vec4 lightColor{0.5f, 0.5f, 1.f, 1.f}; // w is light intensity
@@ -49,6 +50,7 @@ namespace tnk {
         }
 
         SimpleRenderSystem simpleRenderSystem{tnkDevice, tnkRenderer.getSwapChainRenderPass(), globalSetLayout->getDescriptorSetLayout()};
+        PointLightSystem pointLightSystem{tnkDevice, tnkRenderer.getSwapChainRenderPass(), globalSetLayout->getDescriptorSetLayout()};
         TnkCamera camera{};
         camera.transform.translation.z = -3.0f;
 
@@ -60,7 +62,7 @@ namespace tnk {
 
         // capture cursor
         glfwSetInputMode(tnkWindow.getGLFWwindow(), GLFW_CURSOR, GLFW_CURSOR_DISABLED);
-        tnkRenderer.setClearColor(glm::vec3(0.1f, 0.1f, 0.1f));
+        tnkRenderer.setClearColor(glm::vec3(0.3f, 0.6f, 1));
 
 
         while (!tnkWindow.shouldClose()) {
@@ -90,13 +92,15 @@ namespace tnk {
 
                 // update
                 GlobalUbo ubo{};
-                ubo.projectionView = camera.getProjectionMatrix() * camera.getViewMatrix();
+                ubo.projection = camera.getProjectionMatrix();
+                ubo.view = camera.getViewMatrix();
                 uboBuffers[frameIndex]->writeToBuffer(&ubo);
                 uboBuffers[frameIndex]->flush();
 
                 // render
                 tnkRenderer.beginSwapChainRenderPass(commandBuffer);
                 simpleRenderSystem.renderGameObjects(frameInfo);
+                pointLightSystem.render(frameInfo);
                 tnkRenderer.endSwapChainRenderPass(commandBuffer);
                 tnkRenderer.endFrame();
             }
@@ -117,12 +121,12 @@ namespace tnk {
     }
 
     void FirstApp::loadGameObjects() {
-        std::shared_ptr<TnkModel> model = TnkModel::createModelFromFile(tnkDevice, "models/smooth_vase.obj");
+        std::shared_ptr<TnkModel> model = TnkModel::createModelFromFile(tnkDevice, "models/plants.obj");
 
         auto vase = TnkGameObject::createGameObject();
         vase.model = model;
         vase.transform.translation = glm::vec3{.5f, .5f, 0};
-        vase.transform.scale = glm::vec3{3.f, 1.5f, 3.f};
+        vase.transform.scale = glm::vec3{0.1f, 0.1f, 0.1f};
         gameObjects.emplace(vase.getId(), std::move(vase));
 
         model = TnkModel::createModelFromFile(tnkDevice, "models/quad.obj");

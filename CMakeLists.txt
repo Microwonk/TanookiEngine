@@ -10,6 +10,7 @@ file(GLOB_RECURSE SOURCES "src/*.cpp" "src/*.hpp" "src/**/*.cpp" "src/**/*.hpp")
 # Set the include directories
 include_directories(lib/glm)
 include_directories(lib/tiny_obj_loader)
+include_directories(lib/stb)
 
 # Set the Vulkan SDK path
 set(VULKAN_SDK_PATH "C:/VulkanSDK/1.3.268.0")  # Replace with the actual version number
