@@ -1,8 +1,8 @@
 @echo off
 setlocal
 
-:: Set the path to the glslc compiler (replace with the actual path)
-set GLSLC_PATH="C:/VulkanSDK/1.3.261.1/Bin/glslc.exe"
+:: Set the path to the glslc compiler (change version if necessary)
+set GLSLC_PATH="C:/VulkanSDK/1.3.268.0/Bin/glslc.exe"
 
 :: Set the path to the shaders directory
 set SHADERS_DIR=%CD%\shaders

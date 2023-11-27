@@ -5,13 +5,15 @@ set(EngineName "TanookiEngine")
 project(${EngineName})
 
 # Collect all .cpp and .hpp files from the src directory
-file(GLOB_RECURSE SOURCES "src/*.cpp" "src/*.hpp" "src/core/*.cpp" "src/core/*.hpp")
+file(GLOB_RECURSE SOURCES "src/*.cpp" "src/*.hpp" "src/**/*.cpp" "src/**/*.hpp")
 
 # Set the include directories
 include_directories(lib/glm)
+include_directories(lib/tiny_obj_loader)
+include_directories(lib/stb)
 
 # Set the Vulkan SDK path
-set(VULKAN_SDK_PATH "C:/VulkanSDK/1.3.261.1")  # Replace with the actual version number
+set(VULKAN_SDK_PATH "C:/VulkanSDK/1.3.268.0")  # Replace with the actual version number
 
 # Find Vulkan
 find_package(Vulkan REQUIRED)
@@ -39,6 +41,9 @@ add_custom_target(CompileShaders
 # Add CompileShaders as a dependency for VulkanProject
 add_dependencies(${EngineName} CompileShaders)
 
+# Copy assets to build directory
+file(COPY ${CMAKE_SOURCE_DIR}/assets DESTINATION ${CMAKE_BINARY_DIR})
+
 # Copy only .spv files to build directory after compilation
 file(GLOB_RECURSE SPV_FILES ${CMAKE_SOURCE_DIR}/shaders/*.spv)
 
@@ -47,8 +52,6 @@ add_custom_command(TARGET CompileShaders POST_BUILD
         COMMAND ${CMAKE_COMMAND} -E copy_if_different ${SPV_FILES} ${CMAKE_BINARY_DIR}/shaders
         COMMENT "Copying .spv files to build directory"
 )
-
-
 
 # Add the GLFW subdirectory
 add_subdirectory(lib/glfw3)

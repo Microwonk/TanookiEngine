@@ -1,11 +1,15 @@
 #pragma once
 
 #include "core/tnk_window.hpp"
-#include "core/tnk_device.hpp"
-#include "core/tnk_renderer.hpp"
-#include "core/tnk_model.hpp"
+#include "core/graphics/device.hpp"
+#include "core/graphics/renderer.hpp"
+#include "core/graphics/model.hpp"
 #include "core/tnk_game_object.hpp"
-#include "core/simple_render_system.hpp"
+#include "core/systems/simple_render_system.hpp"
+#include "core/systems/point_light_system.hpp"
+#include "core/graphics/camera.hpp"
+#include "core/tnk_controller.hpp"
+#include "core/graphics/descriptors.hpp"
 
 #define GLM_FORCE_RADIANS
 #define GLM_FORCE_DEPTH_ZERO_TO_ONE // openGL uses -1 to 0, this uses 0 to 1
@@ -20,8 +24,8 @@ namespace tnk
 	class FirstApp
 	{
 	public:
-		static constexpr int WIDTH = 800;
-		static constexpr int HEIGHT = 600;
+		static constexpr int WIDTH = 1280;
+		static constexpr int HEIGHT = 720;
 
         FirstApp();
         ~FirstApp();
@@ -37,10 +41,12 @@ namespace tnk
 
         int tnkFps;
 
-		TnkWindow tnkWindow{ WIDTH, HEIGHT, "Hello Vulkan!" };
+		TnkWindow tnkWindow{ WIDTH, HEIGHT, "Debug Game" };
         TnkDevice tnkDevice{tnkWindow};
         TnkRenderer tnkRenderer{tnkWindow, tnkDevice};
 
-        std::vector<TnkGameObject> gameObjects;
+        // order of declaration matters (pool needs to be destroyed before the devices) i.e. the deref works from bottom to top
+        std::unique_ptr<TnkDescriptorPool> globalPool{};
+        TnkGameObject::Map gameObjects;
 	};
 }

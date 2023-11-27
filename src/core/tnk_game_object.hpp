@@ -1,29 +1,21 @@
 #pragma once
 
-#include "tnk_model.hpp"
+#include "graphics/model.hpp"
+#include "transform_component.hpp"
 
+#include <unordered_map>
+#include <glm/gtc/matrix_transform.hpp>
+#include <glm/gtc/quaternion.hpp>
 #include <memory>
 
 namespace tnk {
 
-    struct Transform2DComponent {
-        glm::vec2 translation{}; // position offset
-        glm::vec2 scale{1.f, 1.f};
-        float rotation;
-
-        glm::mat2 mat2() {
-            const float s = glm::sin(rotation);
-            const float c = glm::cos(rotation);
-            glm::mat2 rotMat{{c, s}, {-s, c}};
-
-            glm::mat2 scaleMat{{scale.x, .0f}, {.0f, scale.y}};
-            return rotMat * scaleMat;
-        }
-    };
-
+    // TODO implement ECS with
+    // https://austinmorlan.com/posts/entity_component_system/
     class TnkGameObject {
     public:
         using id_t = unsigned int;
+        using Map = std::unordered_map<id_t, TnkGameObject>;
 
         static TnkGameObject createGameObject() {
             static id_t currentId = 0;
@@ -40,7 +32,7 @@ namespace tnk {
 
         std::shared_ptr<TnkModel> model{};
         glm::vec3 color {};
-        Transform2DComponent transform2d;
+        TransformComponent transform{};
 
     private:
         TnkGameObject(id_t objId) : id{objId} {}
